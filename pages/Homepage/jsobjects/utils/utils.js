@@ -3,6 +3,7 @@ export default {
 		await storeValue('cart', appsmith.store?.cart || [])
 		await storeValue('search', appsmith.store?.search || '')
 		await storeValue('filter', appsmith.store?.filter || '')
+		await storeValue('isLogin', false)
 	},
 
 	resetCart: () =>{
@@ -12,45 +13,40 @@ export default {
 	
 	addToCart: async () => {
     await closeModal('mod_productDetail');
-    const existingProduct = appsmith.store.cart.find(product => product.id === lst_productList.selectedItem.id);
+    const existingProduct = appsmith.store.cart.find(product => product.productID === lst_productList.selectedItem.productID);
     if (existingProduct) {
         existingProduct.qty += 1;
     } else {
         appsmith.store.cart.push({
-            id: lst_productList.selectedItem.id,
-            make: lst_productList.selectedItem.make,
+            productID: lst_productList.selectedItem.productID,
+            productName: lst_productList.selectedItem.productName,
             model: lst_productList.selectedItem.model,
             qty: 1,
-            price: lst_productList.selectedItem.price,
+            retailPrice: lst_productList.selectedItem.retailPrice,
             image: lst_productList.selectedItem.image
         });
     }
     await storeValue('cart', appsmith.store.cart);
-    await showAlert(`${lst_productList.selectedItem.model} added to cart`, 'info');
-},
+    // await showAlert(`${lst_productList.selectedItem.model} added to cart`, 'info');
+		await showAlert(`${lst_productList.selectedItem.productLine} đã thêm vào giỏ hàng`, 'info');
 
-	// addToCart: async () => {
-		// await closeModal('mod_productDetail');
-		// await storeValue('cart', 			 		appsmith.store.cart.concat({id:lst_productList.selectedItem.id,make:lst_productList.selectedItem.make,model:lst_productList.selectedItem.model,qty:1,price:lst_productList.selectedItem.price,image:lst_productList.selectedItem.image}));
-		// await showAlert(`${lst_productList.selectedItem.model} added to cart`,'info')
-	// },
+},
 
 	saveQty: async (qty, itemId)=>{
 		let cart = appsmith.store.cart;
-		let cartRow = cart.findIndex(item=>item.id==itemId);
+		let cartRow = cart.findIndex(item => item.productID == itemId);
 		cart[cartRow].qty = qty;
 		await storeValue('cart',cart);
 		await resetWidget('lst_cart')
 	},
 
-	showConfirm: async (title,message,icon) => {
-		await storeValue('confirm',{message:message,title:title,icon:icon});
+	showConfirm: async (title, message, icon) => {
+		await storeValue('confirm',{message:message, title:title, icon:icon});
 		await resetWidget('mdl_confirm');
 		await showModal('mdl_confirm');
 	},
 
 	isConfirmed: () => {
-
 		let confirm = appsmith.store.confirm;
 		if (confirm.response != undefined) {
 			confirm.response = true;
@@ -83,7 +79,7 @@ export default {
 
 	},
 
-	getSelectOptions: (data, labelKey, valueKey = 'id') => {  
+	getSelectOptions: (data, labelKey, valueKey = 'productID') => {  
 		// creates a deduplicated array of SelectOptions from data 
 		let dupValues = data?.map(row => {return {'label':row[labelKey], 'value':row[valueKey]}});
 		let output = {};

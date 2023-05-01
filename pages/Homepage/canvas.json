@@ -1053,7 +1053,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 57,
+              "leftColumn": 56,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -2279,6 +2279,7 @@
               "boxShadow": "none",
               "widgetName": "mdl_cart",
               "isCanvas": true,
+              "dynamicPropertyPathList": [],
               "displayName": "Modal",
               "iconSVG": "/static/media/icon.4975978e9a961fb0bfb4e38de7ecc7c5.svg",
               "searchTags": [
@@ -2312,7 +2313,7 @@
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 702,
+                  "minHeight": 700,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [
@@ -2471,8 +2472,8 @@
                       "searchTags": [
                         "choice"
                       ],
-                      "topRow": 52,
-                      "bottomRow": 56,
+                      "topRow": 55,
+                      "bottomRow": 59,
                       "parentRowSpace": 10,
                       "labelWidth": "13",
                       "type": "RADIO_GROUP_WIDGET",
@@ -2536,8 +2537,8 @@
                       "searchTags": [
                         "choice"
                       ],
-                      "topRow": 56,
-                      "bottomRow": 60,
+                      "topRow": 59,
+                      "bottomRow": 63,
                       "parentRowSpace": 10,
                       "labelWidth": "13",
                       "type": "RADIO_GROUP_WIDGET",
@@ -2602,8 +2603,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 60,
-                      "bottomRow": 65,
+                      "topRow": 63,
+                      "bottomRow": 68,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -2665,8 +2666,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 60,
-                      "bottomRow": 65,
+                      "topRow": 63,
+                      "bottomRow": 68,
                       "tooltip": "",
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
@@ -2744,7 +2745,7 @@
                             }
                           ],
                           "shouldTruncate": false,
-                          "text": "{{lst_cart.listData.map((currentItem) => '$' + parseFloat(currentItem.qty * currentItem.price).toFixed(2))}}",
+                          "text": "{{lst_cart.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '$' + parseFloat(currentItem.qty * currentItem.retailPrice).toFixed(2);\n              })();\n            })}}",
                           "key": "gfcefjn30k",
                           "isDeprecated": false,
                           "rightColumn": 45,
@@ -2764,7 +2765,7 @@
                           "minDynamicHeight": 4
                         },
                         "cartProductName": {
-                          "text": "{{lst_cart.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.make + ' -' + currentItem.model;\n              })();\n            })}}",
+                          "text": "{{lst_cart.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.productName + ' -' + currentItem.model;\n              })();\n            })}}",
                           "widgetName": "cartProductName"
                         },
                         "img_cartProductImg": {
@@ -2975,7 +2976,7 @@
                       "displayName": "List",
                       "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
                       "topRow": 12,
-                      "bottomRow": 52,
+                      "bottomRow": 55,
                       "parentRowSpace": 10,
                       "type": "LIST_WIDGET",
                       "hideCard": false,
@@ -3148,7 +3149,7 @@
                                         }
                                       ],
                                       "shouldTruncate": false,
-                                      "text": "${{parseFloat(currentItem.qty * currentItem.price).toFixed(2)}}",
+                                      "text": "${{parseFloat(currentItem.qty * currentItem.retailPrice).toFixed(2)}}",
                                       "key": "gfcefjn30k",
                                       "isDeprecated": false,
                                       "rightColumn": 40,
@@ -3496,7 +3497,7 @@
                                       ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                                      "text": "{{currentItem.make}} -{{currentItem.model}}",
+                                      "text": "{{currentItem.productName}} -{{currentItem.model}}",
                                       "key": "szpfg1fl9w",
                                       "isDeprecated": false,
                                       "rightColumn": 56,
@@ -3853,7 +3854,7 @@
                 }
               ],
               "key": "srvhmurubr",
-              "height": 702,
+              "height": 700,
               "isDeprecated": false,
               "rightColumn": 0,
               "detachFromLayout": true,
@@ -3865,6 +3866,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "onClose": "",
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
               "width": 427.5,
@@ -4874,7 +4876,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "btn_yesClearFilters",
-                      "onClick": "{{utils.isConfirmed();\naddOrder.run();\naddOrderDetails.run();\naddPayment.run().then(() => {}).catch(() => {});\nresetWidget(\"sel_sort\", true);}}",
+                      "onClick": "{{utils.isConfirmed();\naddOrder.run();\naddOrderDetails.run();\naddPayment.run().then(() => {}).catch(() => {});}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [],
                       "displayName": "Button",
@@ -5732,7 +5734,7 @@
               "labelPosition": "Left",
               "labelTooltip": "",
               "options": "{{utils.getSelectOptions(getProducts?.data, 'productLine', 'productLine')}}",
-              "placeholderText": "Lọc theo phân loại",
+              "placeholderText": "Lọc phân loại",
               "isDisabled": false,
               "key": "bhy8av2goh",
               "labelTextSize": "0.875rem",
@@ -6014,7 +6016,9 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Homepage_utils.onOpen",
               "name": "utils.onOpen",
@@ -6022,7 +6026,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async () => {\n  await storeValue('cart', appsmith.store?.cart || []);\n  await storeValue('search', appsmith.store?.search || '');\n  await storeValue('filter', appsmith.store?.filter || '');\n}"
+                "async () => {\n  await storeValue('cart', appsmith.store?.cart || []);\n  await storeValue('search', appsmith.store?.search || '');\n  await storeValue('filter', appsmith.store?.filter || '');\n  await storeValue('isLogin', false);\n}"
               ],
               "timeoutInMillisecond": 10000
             }

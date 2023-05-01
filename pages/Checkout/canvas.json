@@ -240,19 +240,19 @@
                           "key": "primaryColumns.model.computedValue"
                         },
                         {
-                          "key": "primaryColumns.price.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.customColumn2.computedValue"
                         },
                         {
                           "key": "primaryColumns.image.computedValue"
                         },
                         {
-                          "key": "primaryColumns.make.computedValue"
+                          "key": "primaryColumns.productID.computedValue"
                         },
                         {
-                          "key": "primaryColumns.id.computedValue"
+                          "key": "primaryColumns.productName.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.retailPrice.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -291,7 +291,7 @@
                         }
                       },
                       "borderRadius": "0px",
-                      "columnUpdatedAt": 1682823740760,
+                      "columnUpdatedAt": 1682947057252,
                       "primaryColumnId": "id",
                       "defaultSelectedRowIndices": [
                         0
@@ -302,10 +302,10 @@
                         "image",
                         "qty",
                         "model",
-                        "price",
                         "customColumn2",
-                        "make",
-                        "id"
+                        "productID",
+                        "productName",
+                        "retailPrice"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -392,35 +392,6 @@
                           "sticky": "",
                           "fontStyle": "ITALIC"
                         },
-                        "price": {
-                          "allowCellWrapping": false,
-                          "index": 3,
-                          "width": 150,
-                          "originalId": "price",
-                          "id": "price",
-                          "alias": "price",
-                          "horizontalAlignment": "CENTER",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textColor": "",
-                          "textSize": "1rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "price",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( '$' + parseFloat(currentRow[\"price\"]).toFixed(2)))}}",
-                          "cellBackground": "",
-                          "validation": {},
-                          "sticky": "",
-                          "fontStyle": "ITALIC"
-                        },
                         "customColumn2": {
                           "allowCellWrapping": false,
                           "index": 5,
@@ -479,13 +450,14 @@
                           "sticky": "",
                           "fontStyle": "ITALIC"
                         },
-                        "make": {
+                        "productID": {
                           "allowCellWrapping": false,
-                          "index": 5,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 3,
                           "width": 150,
-                          "originalId": "make",
-                          "id": "make",
-                          "alias": "make",
+                          "originalId": "productID",
+                          "id": "productID",
+                          "alias": "productID",
                           "horizontalAlignment": "CENTER",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -500,25 +472,25 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "make",
+                          "label": "productID",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"make\"]))}}",
+                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"productID\"]))}}",
+                          "sticky": "",
                           "validation": {},
-                          "cellBackground": "",
-                          "sticky": ""
+                          "cellBackground": ""
                         },
-                        "id": {
+                        "productName": {
                           "allowCellWrapping": false,
                           "allowSameOptionsInNewRow": true,
-                          "index": 0,
+                          "index": 4,
                           "width": 150,
-                          "originalId": "id",
-                          "id": "id",
-                          "alias": "id",
+                          "originalId": "productName",
+                          "id": "productName",
+                          "alias": "productName",
                           "horizontalAlignment": "CENTER",
                           "verticalAlignment": "CENTER",
-                          "columnType": "number",
+                          "columnType": "text",
                           "textColor": "",
                           "textSize": "1rem",
                           "fontStyle": "ITALIC",
@@ -530,10 +502,40 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "id",
+                          "label": "productName",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"productName\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "retailPrice": {
+                          "allowCellWrapping": false,
+                          "allowSameOptionsInNewRow": true,
+                          "index": 5,
+                          "width": 150,
+                          "originalId": "retailPrice",
+                          "id": "retailPrice",
+                          "alias": "retailPrice",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "1rem",
+                          "fontStyle": "ITALIC",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "retailPrice",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"retailPrice\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": ""
