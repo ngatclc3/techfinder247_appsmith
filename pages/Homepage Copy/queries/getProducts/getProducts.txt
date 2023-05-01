@@ -1,0 +1,3 @@
+SELECT * FROM asset ORDER BY id LIMIT 250; 
+-- The number of ready-made database is huge, but the number of crawled data is only 250
+-- Source: https://www.gsmarena.com

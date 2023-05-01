@@ -1,0 +1,5 @@
+-- SELECT * FROM products LIMIT 250;
+SELECT * FROM (
+  SELECT * FROM products LIMIT 250
+) p
+ORDER BY p.productID DESC;

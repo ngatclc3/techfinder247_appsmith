@@ -1,0 +1,3 @@
+SELECT * FROM customers 
+WHERE username = '{{input_username.text}}' 
+AND password = '{{input_password.text}}';

@@ -1,0 +1,53 @@
+{
+  "pages": [
+    {
+      "id": "RegisterLogin",
+      "isDefault": false
+    },
+    {
+      "id": "Homepage",
+      "isDefault": true
+    },
+    {
+      "id": "Checkout",
+      "isDefault": false
+    },
+    {
+      "id": "Profile",
+      "isDefault": false
+    },
+    {
+      "id": "Homepage Copy",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "clonedFromApplicationId": "644603079fe09732768aaf33",
+  "unpublishedApplicationDetail": {
+    "navigationSetting": {}
+  },
+  "publishedApplicationDetail": {
+    "navigationSetting": {}
+  },
+  "color": "#F1DEFF",
+  "icon": "shopper",
+  "unpublishedAppLayout": {
+    "type": "MOBILE"
+  },
+  "publishedAppLayout": {
+    "type": "MOBILE"
+  },
+  "unpublishedCustomJSLibs": [],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "embedSetting": {
+    "height": "720px",
+    "width": "1024px",
+    "showNavigationBar": false
+  },
+  "isManualUpdate": false,
+  "deleted": false
+}

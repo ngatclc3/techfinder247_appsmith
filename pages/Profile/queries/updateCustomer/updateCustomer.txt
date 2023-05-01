@@ -1,0 +1,9 @@
+UPDATE customers SET 
+    name = '{{appsmith.store?.userName}}', 
+    email = '{{appsmith.store?.userEmail}}',
+    phone = '{{appsmith.store?.userPhone}}', 
+    address = '{{appsmith.store?.address}}', 
+    dob = '{{appsmith.store?.userDOB}}', 
+    gender = '{{appsmith.store?.userGender}}', 
+    created_date = CURDATE()
+WHERE username = {{appsmith.store.userUsername}}
