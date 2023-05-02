@@ -15,10 +15,6 @@
     {
       "id": "Profile",
       "isDefault": false
-    },
-    {
-      "id": "MyOrders",
-      "isDefault": false
     }
   ],
   "viewMode": false,

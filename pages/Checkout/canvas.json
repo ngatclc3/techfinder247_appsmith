@@ -674,6 +674,11 @@
                       "widgetName": "btn_backToStore",
                       "onClick": "{{navigateTo('Homepage', {});}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -2173,7 +2178,9 @@
               "collectionId": "Checkout_utils",
               "confirmBeforeExecute": false,
               "pluginType": "JS",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "async () => {}"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]
