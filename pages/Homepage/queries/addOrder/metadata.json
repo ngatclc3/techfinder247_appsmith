@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT IGNORE INTO orders (orderID, customerID, orderDate, status)\nVALUES (\n\t{{appsmith.store.orderId}},\n\t-- UNIX_TIMESTAMP() + TIME_TO_SEC(NOW()),\n\t-- appsmith.store.userID, -- This value is to test, ensure that payment of 1 customer not add again\n\t\n\t'{{appsmith.store.userID}}', \n\tNOW(), \n\t'Unfulfilled'\n);",
+      "body": "INSERT INTO orders (orderID, customerID, orderDate, status)\nVALUES (\n\t{{appsmith.store.orderID}},\n\t{{appsmith.store.userID}}, \n\tNOW(), \n\t'Unfulfilled'\n);",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.orderId",
+      "appsmith.store.orderID",
       "appsmith.store.userID"
     ],
     "userSetOnLoad": false,

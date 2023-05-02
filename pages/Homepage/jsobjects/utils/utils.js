@@ -49,8 +49,7 @@ export default {
     await storeValue('cart', appsmith.store.cart);
     // await showAlert(`${lst_productList.selectedItem.model} added to cart`, 'info');
 		await showAlert(`${lst_productList.selectedItem.productLine} đã thêm vào giỏ hàng`, 'info');
-
-},
+	},
 
 	saveQty: async (qty, itemId)=>{
 		let cart = appsmith.store.cart;
@@ -109,30 +108,56 @@ export default {
 	},
 	
 	createOrder: async () => {
-		const orderId = BigInt(Date.now().toString() + Math.floor(Math.random() * 1000000).toString()).toString().substr(0, 11);
-		console.log(orderId);
-		await storeValue('orderID', orderId);
-		
-		addOrder.run();
-		addPayment.run();
-		
-		 /*
-			* This code below is to add each product of order into orderdetails table 
-			*/
-		let lineNumber = 1;
-		for (const order in appsmith.store.order) {
-			storeValue('orderdetailsProductID', order.productID)
-			storeValue('orderdetailsQuantityOrdered', order.quantityOrdered)
-			storeValue('orderdetailsPriceEach', order.priceEach)
-			storeValue('orderdetailsOrderLineNumber', lineNumber)
-			
-			addOrderDetails.run()
-			lineNumber++;
-		}
+		const orderID = BigInt(Date.now().toString() + Math.floor(Math.random() * 1000000).toString()).toString().substr(0, 10);
+		showAlert(`orderID: ${orderID}`, 'info');
 
+		if (orderID > 0) {
+				await storeValue('orderID', orderID);
+				addOrder.run();
+				addPayment.run();
+
+				 /*
+					* This code below is to add each product of order into orderdetails table 
+					*/
+				let lineNumber = 1;
+				for (const order of appsmith.store.order) { // SHIT BUG: SYNTAX IS "OF", NOT "IN"
+					await showAlert(`productID: ${order.productID}`, 'info');
+					await showAlert(`qty: ${order.qty}`, 'info');
+					await showAlert(`retailPrice: ${order.retailPrice}`, 'info');
+					await showAlert(`lineNumber: ${lineNumber}`, 'info');
+
+					storeValue('orderdetailsProductID', order.productID)
+					storeValue('orderdetailsQuantityOrdered', order.qty)
+					storeValue('orderdetailsPriceEach', order.retailPrice)
+					storeValue('orderdetailsOrderLineNumber', lineNumber)
+
+					addOrderDetails.run()
+					lineNumber++;
+				}
+		}
 		
+	},
+	
 		
-	}
+	// showMyOrders: async () => {
+    // await closeModal('mod_productDetail');
+    // const existingProduct = appsmith.store.cart.find(product => product.productID === lst_productList.selectedItem.productID);
+    // if (existingProduct) {
+        // existingProduct.qty += 1;
+    // } else {
+        // appsmith.store.cart.push({
+					// productID: lst_productList.selectedItem.productID,
+					// productName: lst_productList.selectedItem.productName,
+					// model: lst_productList.selectedItem.model,
+					// qty: 1,
+					// retailPrice: lst_productList.selectedItem.retailPrice,
+					// image: lst_productList.selectedItem.image
+        // });
+    // }
+    // await storeValue('cart', appsmith.store.cart);
+    // // await showAlert(`${lst_productList.selectedItem.model} added to cart`, 'info');
+		// await showAlert(`${lst_productList.selectedItem.productLine} đã thêm vào giỏ hàng`, 'info');
+	// },
 
 	
 	// getSortOptions: (data, labelKey, valueKey = 'id', sortOptions = []) => {

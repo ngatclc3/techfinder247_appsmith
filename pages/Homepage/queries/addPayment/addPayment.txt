@@ -1,7 +1,7 @@
-INSERT IGNORE INTO payments (paymentID, customerID, amount, paymentMethod) -- This query will insert a new payment record only if a record with the same paymentID does not already exist in the payments table. If a record with the same paymentID already exists, the query will not insert a new record and will not return an error.
+INSERT INTO payments (paymentID, orderID, amount, paymentMethod) -- This query will insert a new payment record only if a record with the same paymentID does not already exist in the payments table. If a record with the same paymentID already exists, the query will not insert a new record and will not return an error.
 VALUES (
-	{{appsmith.store.orderId}},
-	{{appsmith.store.userID}}, 
-	{{appsmith.store.totalPay}}, 
+	'{{appsmith.store.orderID}}',
+	{{appsmith.store.orderID}}, 
+	{{appsmith.store.orderTotalPay}}, 
 	'COD'
 );

@@ -1,10 +1,7 @@
-INSERT IGNORE INTO orders (orderID, customerID, orderDate, status)
+INSERT INTO orders (orderID, customerID, orderDate, status)
 VALUES (
-	{{appsmith.store.orderId}},
-	-- UNIX_TIMESTAMP() + TIME_TO_SEC(NOW()),
-	-- appsmith.store.userID, -- This value is to test, ensure that payment of 1 customer not add again
-	
-	'{{appsmith.store.userID}}', 
+	{{appsmith.store.orderID}},
+	{{appsmith.store.userID}}, 
 	NOW(), 
 	'Unfulfilled'
 );

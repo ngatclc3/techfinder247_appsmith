@@ -1,10 +1,6 @@
 {
   "pages": [
     {
-      "id": "RegisterLogin",
-      "isDefault": false
-    },
-    {
       "id": "Homepage",
       "isDefault": true
     },
@@ -13,7 +9,15 @@
       "isDefault": false
     },
     {
+      "id": "RegisterLogin",
+      "isDefault": false
+    },
+    {
       "id": "Profile",
+      "isDefault": false
+    },
+    {
+      "id": "MyOrders",
       "isDefault": false
     }
   ],
@@ -30,7 +34,7 @@
   "color": "#F1DEFF",
   "icon": "shopper",
   "unpublishedAppLayout": {
-    "type": "MOBILE"
+    "type": "DESKTOP"
   },
   "publishedAppLayout": {
     "type": "MOBILE"

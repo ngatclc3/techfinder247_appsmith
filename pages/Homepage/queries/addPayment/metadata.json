@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT IGNORE INTO payments (paymentID, customerID, amount, paymentMethod) -- This query will insert a new payment record only if a record with the same paymentID does not already exist in the payments table. If a record with the same paymentID already exists, the query will not insert a new record and will not return an error.\nVALUES (\n\t{{appsmith.store.orderId}},\n\t{{appsmith.store.userID}}, \n\t{{appsmith.store.totalPay}}, \n\t'COD'\n);",
+      "body": "INSERT INTO payments (paymentID, orderID, amount, paymentMethod) -- This query will insert a new payment record only if a record with the same paymentID does not already exist in the payments table. If a record with the same paymentID already exists, the query will not insert a new record and will not return an error.\nVALUES (\n\t'{{appsmith.store.orderID}}',\n\t{{appsmith.store.orderID}}, \n\t{{appsmith.store.orderTotalPay}}, \n\t'COD'\n);",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,9 +36,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.orderId",
-      "appsmith.store.totalPay",
-      "appsmith.store.userID"
+      "appsmith.store.orderID",
+      "appsmith.store.orderTotalPay"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

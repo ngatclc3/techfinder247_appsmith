@@ -1,0 +1,13 @@
+SELECT 
+  o.orderID, 
+  o.orderDate, 
+  o.shippedDate, 
+  o.status, 
+  o.comments,
+  p.paymentDate,
+  p.amount
+FROM 
+  orders o 
+  JOIN payments p ON o.orderID = p.orderID
+WHERE 
+  o.customerID = {{appsmith.store.userID}};

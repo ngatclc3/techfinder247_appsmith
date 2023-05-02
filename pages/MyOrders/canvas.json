@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Checkout",
-    "slug": "checkout",
+    "name": "MyOrders",
+    "slug": "myorders",
     "layouts": [
       {
         "viewMode": false,
@@ -178,108 +178,11 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "widgetName": "txt_checkoutTitle",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 2,
-                      "bottomRow": 6,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 0,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Đơn hàng hoàn thành!",
-                      "key": "elj90f75an",
-                      "isDeprecated": false,
-                      "rightColumn": 64,
-                      "textAlign": "CENTER",
-                      "dynamicHeight": "FIXED",
-                      "widgetId": "8busputtbp",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#999999",
-                      "version": 1,
-                      "parentId": "11le3tas5h",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "maxDynamicHeight": 9000,
-                      "fontSize": "1.25rem",
-                      "minDynamicHeight": 4
-                    },
-                    {
-                      "widgetName": "txt_checkout_orderID",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 13,
-                      "bottomRow": 17,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 0,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Mã đơn hàng: {{appsmith.store.orderID}}",
-                      "key": "elj90f75an",
-                      "isDeprecated": false,
-                      "rightColumn": 37,
-                      "textAlign": "LEFT",
-                      "dynamicHeight": "FIXED",
-                      "widgetId": "arrr76sxgl",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#999999",
-                      "version": 1,
-                      "parentId": "11le3tas5h",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "maxDynamicHeight": 9000,
-                      "fontSize": "0.875rem",
-                      "minDynamicHeight": 4
-                    },
-                    {
                       "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
                       "isVisibleDownload": false,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
                       "topRow": 17,
-                      "isSortable": false,
+                      "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "CUSTOM",
                       "animateLoading": true,
@@ -314,10 +217,10 @@
                       ],
                       "leftColumn": 0,
                       "delimiter": ",",
-                      "defaultSelectedRowIndex": "0",
+                      "defaultSelectedRowIndex": 0,
                       "showInlineEditingOptionDropdown": true,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisibleFilters": false,
+                      "isVisibleFilters": true,
                       "isVisible": true,
                       "fontStyle": "ITALIC",
                       "enableClientSideSearch": false,
@@ -349,11 +252,11 @@
                       },
                       "borderRadius": "0px",
                       "columnUpdatedAt": 1683014433100,
-                      "primaryColumnId": "productID",
+                      "primaryColumnId": "model",
                       "defaultSelectedRowIndices": [
                         0
                       ],
-                      "widgetName": "tbl_cart",
+                      "widgetName": "tbl_myOrders",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "image",
@@ -382,8 +285,7 @@
                         "customColumn2": 106,
                         "image": 66,
                         "make": 427,
-                        "retailPrice": 97,
-                        "productName": 431
+                        "retailPrice": 97
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -416,7 +318,7 @@
                           "label": "SL",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"qty\"]))}}",
+                          "computedValue": "{{tbl_myOrders.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"qty\"]))}}",
                           "onSubmit": "{{utils.saveQty(currentRow.qty)}}",
                           "validation": {},
                           "sticky": "",
@@ -445,7 +347,7 @@
                           "label": "Model",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"model\"]))}}",
+                          "computedValue": "{{tbl_myOrders.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"model\"]))}}",
                           "cellBackground": "",
                           "validation": {},
                           "sticky": "",
@@ -473,7 +375,7 @@
                           "label": "Tổng",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( '$' + parseFloat(currentRow.qty * currentRow.retailPrice).toFixed(2)))}}",
+                          "computedValue": "{{tbl_myOrders.processedTableData.map((currentRow, currentIndex) => ( '$' + parseFloat(currentRow.qty * currentRow.retailPrice).toFixed(2)))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF",
                           "validation": {},
@@ -503,7 +405,7 @@
                           "label": "Ảnh",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"image\"]))}}",
+                          "computedValue": "{{tbl_myOrders.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"image\"]))}}",
                           "cellBackground": "",
                           "validation": {},
                           "sticky": "",
@@ -534,7 +436,7 @@
                           "label": "Mã sản phẩm",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"productID\"]))}}",
+                          "computedValue": "{{tbl_myOrders.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"productID\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": ""
@@ -564,7 +466,7 @@
                           "label": "Tên sản phẩm",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"productName\"]))}}",
+                          "computedValue": "{{tbl_myOrders.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"productName\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": ""
@@ -594,7 +496,7 @@
                           "label": "Đơn giá",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( '$' + currentRow[\"retailPrice\"]))}}",
+                          "computedValue": "{{tbl_myOrders.processedTableData.map((currentRow, currentIndex) => ( '$' + currentRow[\"retailPrice\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": ""
@@ -612,7 +514,7 @@
                       "parentId": "11le3tas5h",
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "CENTER",
-                      "isVisibleSearch": false,
+                      "isVisibleSearch": true,
                       "isVisiblePagination": false,
                       "verticalAlignment": "CENTER"
                     },
@@ -680,8 +582,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 6,
-                      "bottomRow": 10,
+                      "topRow": 7,
+                      "bottomRow": 11,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -717,6 +619,164 @@
                       "buttonVariant": "SECONDARY",
                       "iconAlign": "left",
                       "placement": "CENTER"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Container_with_nav_button",
+                      "borderColor": "transparent",
+                      "isCanvas": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "displayName": "Container",
+                      "iconSVG": "/static/media/icon.1977dca3.svg",
+                      "topRow": 0,
+                      "bottomRow": 7,
+                      "parentRowSpace": 10,
+                      "type": "CONTAINER_WIDGET",
+                      "hideCard": false,
+                      "shouldScrollContents": true,
+                      "animateLoading": true,
+                      "parentColumnSpace": 18.0625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "backgroundColor"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "boxShadow": "none",
+                          "widgetName": "Canvas1Copy",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 70,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": false,
+                          "hideCard": true,
+                          "minHeight": 400,
+                          "parentColumnSpace": 1,
+                          "leftColumn": 0,
+                          "children": [
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "container_name2",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 0,
+                              "bottomRow": 5,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "shouldScrollContents": true,
+                              "animateLoading": true,
+                              "parentColumnSpace": 16.62109375,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 4,
+                              "dynamicBindingPathList": [],
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Đơn hàng của tôi",
+                              "key": "czyq0gtp0e",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 62,
+                              "textAlign": "CENTER",
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "n28fq1jnqs",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#fafafa",
+                              "version": 1,
+                              "parentId": "5dq2yt50dj",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "1.5rem",
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "IconButton2",
+                              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "displayName": "Icon Button",
+                              "iconSVG": "/static/media/icon.1a0c634a.svg",
+                              "searchTags": [
+                                "click",
+                                "submit"
+                              ],
+                              "topRow": 0,
+                              "bottomRow": 5,
+                              "parentRowSpace": 10,
+                              "type": "ICON_BUTTON_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 13.45703125,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 0,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "buttonColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "isDisabled": false,
+                              "key": "j08omv4z4m",
+                              "isDeprecated": false,
+                              "rightColumn": 4,
+                              "iconName": "form",
+                              "widgetId": "8a79levh2t",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "5dq2yt50dj",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "buttonVariant": "PRIMARY"
+                            }
+                          ],
+                          "key": "ffadum178l",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 433.5,
+                          "detachFromLayout": true,
+                          "widgetId": "5dq2yt50dj",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "vhp0e61qb7",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
+                        }
+                      ],
+                      "borderWidth": "0",
+                      "key": "6bzu8mpizb",
+                      "labelTextSize": "0.875rem",
+                      "backgroundColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "rightColumn": 64,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "vhp0e61qb7",
+                      "containerStyle": "card",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "11le3tas5h",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "15px",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
                     }
                   ],
                   "key": "0i88e4pa16",
@@ -1318,7 +1378,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Price:  ${{tbl_cart.selectedRow.price}}",
+                      "text": "Price:  ${{tbl_myOrders.selectedRow.price}}",
                       "key": "eo5jq6nzx4",
                       "isDeprecated": false,
                       "rightColumn": 63,
@@ -1408,7 +1468,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{tbl_cart.selectedRow.make}}: {{tbl_cart.selectedRow.model}}",
+                      "text": "{{tbl_myOrders.selectedRow.make}}: {{tbl_cart.selectedRow.model}}",
                       "key": "hu1bj4r8eg",
                       "isDeprecated": false,
                       "rightColumn": 42,
@@ -1548,7 +1608,7 @@
                           "key": "defaultImage"
                         }
                       ],
-                      "defaultImage": "{{tbl_cart.selectedRow.image}}",
+                      "defaultImage": "{{tbl_myOrders.selectedRow.image}}",
                       "key": "iiv2itub99",
                       "image": "",
                       "isDeprecated": false,
@@ -2168,9 +2228,9 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Checkout_utils.onOpen",
+              "id": "MyOrders_utils.onOpen",
               "name": "utils.onOpen",
-              "collectionId": "Checkout_utils",
+              "collectionId": "MyOrders_utils",
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [],
@@ -2180,7 +2240,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Checkout",
+        "id": "MyOrders",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -2191,5 +2251,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "6449e2a801e69b53ba6da24d_6449e2a801e69b53ba6da255"
+  "gitSyncId": "644fc56dbf34ca68b34eef28_64512453ab94f84bbca98d77"
 }

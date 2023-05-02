@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1292,
+          "bottomRow": 710,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -308,7 +308,7 @@
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 0,
-              "bottomRow": 82,
+              "bottomRow": 71,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -324,7 +324,7 @@
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 820,
+                  "bottomRow": 710,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -503,8 +503,8 @@
                       ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 75,
-                      "bottomRow": 80,
+                      "topRow": 64,
+                      "bottomRow": 69,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -515,7 +515,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 42,
+                      "leftColumn": 41,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -525,7 +525,7 @@
                       "isDisabled": false,
                       "key": "fu5cfw8tbj",
                       "labelTextSize": "0.875rem",
-                      "rightColumn": 62,
+                      "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "iconName": "",
                       "widgetId": "41r7k3f89b",
@@ -561,8 +561,8 @@
                       ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 75,
-                      "bottomRow": 80,
+                      "topRow": 64,
+                      "bottomRow": 69,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -573,7 +573,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 2,
+                      "leftColumn": 3,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -589,7 +589,7 @@
                       "isDisabled": "{{appsmith.store?.userUsername ? false : true}}",
                       "key": "fu5cfw8tbj",
                       "labelTextSize": "0.875rem",
-                      "rightColumn": 23,
+                      "rightColumn": 24,
                       "isDefaultClickDisabled": true,
                       "iconName": "log-out",
                       "widgetId": "2jh7n7n73m",
@@ -620,7 +620,7 @@
                       "displayName": "Container",
                       "iconSVG": "/static/media/icon.1977dca3.svg",
                       "topRow": 7,
-                      "bottomRow": 74,
+                      "bottomRow": 64,
                       "parentRowSpace": 10,
                       "type": "CONTAINER_WIDGET",
                       "hideCard": false,
@@ -640,7 +640,7 @@
                           "widgetName": "Canvas4",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 660,
+                          "bottomRow": 560,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -797,100 +797,6 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "checkbox_receiveOrders",
-                              "displayName": "Checkbox",
-                              "iconSVG": "/static/media/icon.aaab032b.svg",
-                              "topRow": 57,
-                              "bottomRow": 61,
-                              "parentRowSpace": 10,
-                              "type": "CHECKBOX_WIDGET",
-                              "alignWidget": "LEFT",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "parentColumnSpace": 14.0625,
-                              "dynamicTriggerPathList": [
-                                {
-                                  "key": "onCheckChange"
-                                }
-                              ],
-                              "leftColumn": 2,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                }
-                              ],
-                              "labelPosition": "Left",
-                              "onCheckChange": "{{storeValue('hasReceivedOrdersViaEmail', checkbox_receiveOrders.checked ? true : false);}}",
-                              "isDisabled": false,
-                              "key": "4a37biqkzr",
-                              "labelTextSize": "0.875rem",
-                              "isRequired": false,
-                              "rightColumn": 61,
-                              "dynamicHeight": "FIXED",
-                              "widgetId": "8rzujm84kd",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "label": "Nhận thông báo đơn hàng qua email",
-                              "version": 1,
-                              "parentId": "80qffb99zt",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "originalTopRow": 57,
-                              "borderRadius": "0px",
-                              "defaultCheckedState": true,
-                              "maxDynamicHeight": 9000,
-                              "originalBottomRow": 61,
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "none",
-                              "widgetName": "checkbox_receivePromotions",
-                              "displayName": "Checkbox",
-                              "iconSVG": "/static/media/icon.aaab032b.svg",
-                              "topRow": 61,
-                              "bottomRow": 65,
-                              "parentRowSpace": 10,
-                              "type": "CHECKBOX_WIDGET",
-                              "alignWidget": "LEFT",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "parentColumnSpace": 14.0625,
-                              "dynamicTriggerPathList": [
-                                {
-                                  "key": "onCheckChange"
-                                }
-                              ],
-                              "leftColumn": 2,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                }
-                              ],
-                              "labelPosition": "Left",
-                              "onCheckChange": "{{storeValue('hasReceivedPromotionsViaEmail', checkbox_receivePromotions.checked ? true : false);}}",
-                              "isDisabled": false,
-                              "key": "4a37biqkzr",
-                              "labelTextSize": "0.875rem",
-                              "isRequired": false,
-                              "rightColumn": 61,
-                              "dynamicHeight": "FIXED",
-                              "widgetId": "92xccdchr6",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "label": "Nhận thông báo về các ưu đãi qua email",
-                              "version": 1,
-                              "parentId": "80qffb99zt",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "originalTopRow": 61,
-                              "borderRadius": "0px",
-                              "defaultCheckedState": true,
-                              "maxDynamicHeight": 9000,
-                              "originalBottomRow": 65,
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "none",
                               "widgetName": "label_name",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -997,7 +903,7 @@
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "onSubmit": "",
                               "topRow": 41,
-                              "bottomRow": 46,
+                              "bottomRow": 45,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -1047,7 +953,7 @@
                               "originalTopRow": 41,
                               "borderRadius": "0.375rem",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 46,
+                              "originalBottomRow": 45,
                               "iconAlign": "left",
                               "defaultText": "{{appsmith.store.userAddress ? appsmith.store.userAddress : \"\"}}",
                               "minDynamicHeight": 4
@@ -1133,7 +1039,7 @@
                               "boxShadow": "none",
                               "iconSVG": "/static/media/icon.108789d7165de30306435ab3c24e6cad.svg",
                               "onSubmit": "",
-                              "topRow": 46,
+                              "topRow": 45,
                               "labelWidth": 5,
                               "type": "PHONE_INPUT_WIDGET",
                               "animateLoading": true,
@@ -1161,7 +1067,7 @@
                               "isLoading": false,
                               "regex": "",
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "originalBottomRow": 53,
+                              "originalBottomRow": 52,
                               "mobileBottomRow": 41,
                               "widgetName": "userPhone",
                               "dynamicPropertyPathList": [],
@@ -1169,7 +1075,7 @@
                               "searchTags": [
                                 "call"
                               ],
-                              "bottomRow": 53,
+                              "bottomRow": 52,
                               "parentRowSpace": 10,
                               "defaultDialCode": "+84",
                               "autoFocus": false,
@@ -1200,7 +1106,7 @@
                               "renderMode": "CANVAS",
                               "mobileTopRow": 34,
                               "responsiveBehavior": "fill",
-                              "originalTopRow": 46,
+                              "originalTopRow": 45,
                               "mobileLeftColumn": 1,
                               "maxDynamicHeight": 9000,
                               "iconAlign": "left",
@@ -1243,7 +1149,7 @@
                               "isVisible": true,
                               "version": 1,
                               "isLoading": false,
-                              "originalBottomRow": 40,
+                              "originalBottomRow": 36,
                               "alignment": "left",
                               "mobileBottomRow": 24,
                               "widgetName": "userGender",
@@ -1252,7 +1158,7 @@
                               "searchTags": [
                                 "choice"
                               ],
-                              "bottomRow": 40,
+                              "bottomRow": 36,
                               "parentRowSpace": 10,
                               "hideCard": false,
                               "mobileRightColumn": 48,
@@ -1325,8 +1231,8 @@
                               "searchTags": [
                                 "line"
                               ],
-                              "topRow": 53,
-                              "bottomRow": 57,
+                              "topRow": 52,
+                              "bottomRow": 56,
                               "parentRowSpace": 10,
                               "type": "DIVIDER_WIDGET",
                               "capType": "nc",
@@ -1357,9 +1263,9 @@
                               "isLoading": false,
                               "mobileTopRow": 40,
                               "responsiveBehavior": "fill",
-                              "originalTopRow": 53,
+                              "originalTopRow": 52,
                               "mobileLeftColumn": 5,
-                              "originalBottomRow": 57
+                              "originalBottomRow": 56
                             },
                             {
                               "mobileBottomRow": 44,

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "addOrderDetails",
+    "name": "getMyOrders",
     "datasource": {
       "name": "Ubuntu classicmodels",
       "pluginId": "mysql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO orderdetails (orderID, productID, quantityOrdered, priceEach, orderLineNumber)\nVALUES (\n\t{{appsmith.store.orderID}},\n\t'{{appsmith.store.orderdetailsProductID}}',\n\t{{appsmith.store.orderdetailsQuantityOrdered}},\n\t{{appsmith.store.orderdetailsPriceEach}},\n\t{{appsmith.store.orderdetailsOrderLineNumber}}\n);\n",
+      "body": "SELECT \n  o.orderID, \n  o.orderDate, \n  o.shippedDate, \n  o.status, \n  o.comments,\n  p.paymentDate,\n  p.amount\nFROM \n  orders o \n  JOIN payments p ON o.orderID = p.orderID\nWHERE \n  o.customerID = {{appsmith.store.userID}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -36,18 +36,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.orderID",
-      "appsmith.store.orderdetailsOrderLineNumber",
-      "appsmith.store.orderdetailsPriceEach",
-      "appsmith.store.orderdetailsProductID",
-      "appsmith.store.orderdetailsQuantityOrdered"
+      "appsmith.store.userID"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Homepage_addOrderDetails",
+  "id": "Homepage_getMyOrders",
   "deleted": false,
-  "gitSyncId": "644fc56dbf34ca68b34eef28_6450ed65918e43297bcc21bb"
+  "gitSyncId": "644fc56dbf34ca68b34eef28_6451257a785070779ef74965"
 }

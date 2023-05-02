@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Checkout",
+    "pageId": "MyOrders",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -37,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Checkout_getProducts",
+  "id": "MyOrders_getProducts",
   "deleted": false,
-  "gitSyncId": "6449e2a801e69b53ba6da24d_6449e2a801e69b53ba6da26a"
+  "gitSyncId": "644fc56dbf34ca68b34eef28_64512453ab94f84bbca98d7a"
 }
