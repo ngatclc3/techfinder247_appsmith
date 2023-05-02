@@ -30,7 +30,7 @@ export default {
 		await storeValue('userUsername', username);
 		await storeValue('userPassword', password);
 		showAlert('Đăng nhập thành công');
-		// await navigateTo('Homepage');
+		await navigateTo('Homepage');
 	},
 	
 }
