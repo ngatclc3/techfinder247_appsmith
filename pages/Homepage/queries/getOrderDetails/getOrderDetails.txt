@@ -1,1 +1,1 @@
-SELECT * FROM orderdetails;
+SELECT * FROM orderdetails ORDER BY quantityOrdered;

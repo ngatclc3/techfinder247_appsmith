@@ -34,7 +34,7 @@
   "color": "#F1DEFF",
   "icon": "shopper",
   "unpublishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "MOBILE"
   },
   "publishedAppLayout": {
     "type": "DESKTOP"

@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT \n  o.orderID, \n  o.orderDate, \n  o.shippedDate, \n  o.status, \n  o.comments,\n  p.paymentDate,\n  p.amount\nFROM \n  orders o \n  JOIN payments p ON o.orderID = p.orderID\nWHERE \n  o.customerID = {{appsmith.store.userID}};",
+      "body": "SELECT p.paymentID, o.orderID, p.amount, p.paymentMethod, o.orderDate, o.shippedDate, o.status, o.comments\nFROM payments p\nJOIN orders o ON p.customerID = o.customerID\nWHERE p.customerID = '{{appsmith.store.userID}}';",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"

@@ -2688,7 +2688,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "btn_checkoutBtn",
-                      "onClick": "{{utils.showConfirm('THANH TOÁN', appsmith.store.userUsername ? 'Bạn chắc chắn muốn tiến hành thanh toán?' : 'Bạn cần đăng nhập để tiến hành thanh toán!','dollar')}}",
+                      "onClick": "{{utils.showConfirm('THANH TOÁN', appsmith.store.userUsername ? 'Bạn chắc chắn muốn tiến hành thanh toán?' : 'Bạn cần đăng nhập để tiến hành thanh toán. Bạn có muốn đăng nhập ngay bây giờ?','dollar')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -6151,16 +6151,6 @@
         },
         "layoutOnLoadActions": [
           [
-            {
-              "id": "Homepage_getMyOrders",
-              "name": "getMyOrders",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.store.userID"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Homepage_getProducts",
               "name": "getProducts",
