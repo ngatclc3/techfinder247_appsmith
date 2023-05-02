@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "updateCustomer",
+    "name": "addUser",
     "datasource": {
       "name": "Ubuntu classicmodels",
       "pluginId": "mysql-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Profile",
+    "pageId": "RegisterLogin",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE customers SET \n    customerName = '{{appsmith.store?.userName}}', \n    email = '{{appsmith.store?.userEmail}}',\n    phone = '{{appsmith.store?.userPhone}}', \n    addressLine1 = '{{appsmith.store?.userAddress}}', \n    dob = STR_TO_DATE('{{appsmith.store.userDOB}}', '%Y-%m-%dT%H:%i:%s.%fZ'), \n    gender = {{appsmith.store?.userGender === '1' ? 1 : 0}}\nWHERE username = '{{appsmith.store?.userUsername}}';\n",
+      "body": "INSERT INTO customers (customerID, username, password, registerDate)\nSELECT UNIX_TIMESTAMP() + TIME_TO_SEC(NOW()), '{{input_username.text}}', '{{input_password.text}}', NOW()\nFROM dual\nWHERE NOT EXISTS (SELECT * FROM customers WHERE username = '{{input_username.text}}');\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,20 +36,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.userDOB",
-      "appsmith.store?.userAddress",
-      "appsmith.store?.userEmail",
-      "appsmith.store?.userGender === '1' ? 1 : 0",
-      "appsmith.store?.userName",
-      "appsmith.store?.userPhone",
-      "appsmith.store?.userUsername"
+      "input_password.text",
+      "input_username.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Profile_updateCustomer",
+  "id": "RegisterLogin_addUser",
   "deleted": false,
-  "gitSyncId": "644fc56dbf34ca68b34eef28_6450862aab94f84bbca981f9"
+  "gitSyncId": "644fc56dbf34ca68b34eef28_644fd504bf34ca68b34eefd7"
 }

@@ -1,2 +1,0 @@
-DELETE FROM public."asset"
-  WHERE 1 = 0; -- Specify a valid condition here. Removing the condition may delete everything in the table!

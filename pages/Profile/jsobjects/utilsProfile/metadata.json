@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "utilsProfile",
+    "pageId": "Profile",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Profile_utilsProfile",
+  "deleted": false,
+  "gitSyncId": "6449e2a801e69b53ba6da24d_6449e2a801e69b53ba6da293"
+}

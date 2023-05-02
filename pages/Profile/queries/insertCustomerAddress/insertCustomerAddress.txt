@@ -1,1 +1,0 @@
-INSERT INTO customers (name) VALUES ('{{label_address}}');

@@ -1,7 +1,0 @@
-INSERT INTO payments (id_order, payment_date, amount, payment_method)
-VALUES (
-  {{appsmith.store.order.id}},
-  CURDATE(),
-  {{appsmith.store.order.amount}},
-  '{{rad_cart_payment.txt}}'
-);

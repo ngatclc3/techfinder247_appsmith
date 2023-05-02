@@ -15,10 +15,6 @@
     {
       "id": "Profile",
       "isDefault": false
-    },
-    {
-      "id": "Homepage Copy",
-      "isDefault": false
     }
   ],
   "viewMode": false,

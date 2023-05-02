@@ -3,7 +3,6 @@ export default {
 		await storeValue('cart', appsmith.store?.cart || [])
 		await storeValue('search', appsmith.store?.search || '')
 		await storeValue('filter', appsmith.store?.filter || '')
-		await storeValue('isLogin', false)
 	},
 
 	resetCart: () =>{
@@ -87,7 +86,7 @@ export default {
 		let outputProps = Object.getOwnPropertyNames(output);
 		return outputProps.map(prop => output[prop])
 	},
-
+	
 
 	
 	// getSortOptions: (data, labelKey, valueKey = 'id', sortOptions = []) => {

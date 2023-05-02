@@ -1,0 +1,3 @@
+SELECT * FROM customers 
+WHERE username = '{{input_username.text ? input_username.text : ""}}' 
+AND password = '{{input_password.text ? input_password.text : ""}}';

@@ -1,0 +1,4 @@
+INSERT INTO customers (customerID, username, password, registerDate)
+SELECT UNIX_TIMESTAMP() + TIME_TO_SEC(NOW()), '{{input_username.text}}', '{{input_password.text}}', NOW()
+FROM dual
+WHERE NOT EXISTS (SELECT * FROM customers WHERE username = '{{input_username.text}}');

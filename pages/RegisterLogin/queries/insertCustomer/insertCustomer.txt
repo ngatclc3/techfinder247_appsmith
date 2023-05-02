@@ -1,5 +1,0 @@
-INSERT INTO customers (username, password) VALUES (
-    {{ input_username.text }},
-    {{ input_password.text }}
-)
-WHERE NOT EXISTS (SELECT username FROM customers WHERE username = '{{input_username.text}}');

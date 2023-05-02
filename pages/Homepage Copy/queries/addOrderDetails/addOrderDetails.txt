@@ -1,4 +1,0 @@
-INSERT INTO order_details (id_order, id_product, quantity)
-SELECT {{appsmith.store.order}} AS id_order, id AS id_product, {{appsmith.store.order}}.qty AS quantity
-FROM products
-WHERE id = {{appsmith.store.order}}.id_product;

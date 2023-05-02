@@ -1,6 +1,0 @@
-INSERT INTO orders (id_customer, order_status, order_date, qty_item, total_price)
-SELECT id, "UNFULFILLED", NOW(), 
-{{appsmith.store.cart.reduce((acc, obj) => acc + parseInt(obj.qty), 0)}},
-{{appsmith.store.cart.reduce((acc, obj) => acc + obj.price*obj.qty, parseInt(rad_cart_shipping.selectedOptionValue)).toFixed(2)}}
-FROM customers
-WHERE username = '{{appsmith.store.userUsername}}';

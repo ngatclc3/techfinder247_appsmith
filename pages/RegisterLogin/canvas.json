@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 480,
+          "bottomRow": 490,
           "containerStyle": "none",
           "snapRows": 84,
           "parentRowSpace": 1,
@@ -45,7 +45,7 @@
                 "group"
               ],
               "topRow": 11,
-              "bottomRow": 48,
+              "bottomRow": 49,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -54,7 +54,7 @@
               "animateLoading": "true",
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
-              "leftColumn": 3,
+              "leftColumn": 5,
               "dynamicBindingPathList": [],
               "children": [
                 {
@@ -62,7 +62,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 370,
+                  "bottomRow": 380,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -93,7 +93,7 @@
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 17,
+                      "leftColumn": 19,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -110,7 +110,7 @@
                       "text": "Login",
                       "key": "ry3s4yjdj1",
                       "isDeprecated": false,
-                      "rightColumn": 44,
+                      "rightColumn": 46,
                       "textAlign": "CENTER",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "rt8jh7303q",
@@ -133,11 +133,11 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "resetFormOnClick": false,
+                      "resetFormOnClick": true,
                       "boxShadow": "none",
                       "mobileBottomRow": 37,
                       "widgetName": "btn_login",
-                      "onClick": "{{getThisCustomer.data?.filter((user, idx) => user).length ? showAlert('Đăng nhập thành công') && storeValue('userUsername', input_username.text) && storeValue('userPassword', input_password.text) && navigateTo('Homepage') : showAlert('Đăng nhập thất bại')}}\n",
+                      "onClick": "{{utilsLoginRegisterPage.countUser() < 1 || utilsLoginRegisterPage.countUser() > 1 ? showAlert('Đăng nhập thất bại') : utilsLoginRegisterPage.onSession(input_username.text, input_password.text)}}\n",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -150,8 +150,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 31,
-                      "bottomRow": 35,
+                      "topRow": 32,
+                      "bottomRow": 36,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "mobileRightColumn": 62,
@@ -186,30 +186,24 @@
                       "isLoading": false,
                       "mobileTopRow": 33,
                       "responsiveBehavior": "hug",
-                      "originalTopRow": 31,
-                      "disabledWhenInvalid": false,
+                      "originalTopRow": 32,
+                      "disabledWhenInvalid": true,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "mobileLeftColumn": 46,
-                      "originalBottomRow": 35,
+                      "originalBottomRow": 36,
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
-                      "resetFormOnClick": "false",
+                      "resetFormOnClick": true,
                       "boxShadow": "none",
                       "mobileBottomRow": 37,
                       "widgetName": "btn_register",
-                      "onClick": "{{!getThisCustomer.data?.filter((user, idx)=> user).length ? insertCustomer.run() && storeValue('userUsername', input_username.text) && storeValue('userPassword', input_password.text) && showAlert('Đăng ký thành công') && navigateTo('Homepage') : showAlert('Đăng ký thất bại')\n}}\n",
+                      "onClick": "{{utilsLoginRegisterPage.countUser() < 0 || utilsLoginRegisterPage.countUser() > 0  ? showAlert('Đăng ký thất bại') : addUser.run() && showAlert('Đăng ký thành công') && utilsLoginRegisterPage.onSession(input_username.text, input_password.text)}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
                           "key": "onClick"
-                        },
-                        {
-                          "key": "disabledWhenInvalid"
-                        },
-                        {
-                          "key": "resetFormOnClick"
                         }
                       ],
                       "displayName": "Button",
@@ -218,8 +212,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 31,
-                      "bottomRow": 35,
+                      "topRow": 32,
+                      "bottomRow": 36,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "mobileRightColumn": 46,
@@ -254,11 +248,11 @@
                       "isLoading": false,
                       "mobileTopRow": 33,
                       "responsiveBehavior": "hug",
-                      "originalTopRow": 31,
-                      "disabledWhenInvalid": "false",
+                      "originalTopRow": 32,
+                      "disabledWhenInvalid": true,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "mobileLeftColumn": 30,
-                      "originalBottomRow": 35,
+                      "originalBottomRow": 36,
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
@@ -434,7 +428,7 @@
                         "label"
                       ],
                       "topRow": 23,
-                      "bottomRow": 27,
+                      "bottomRow": 28,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -462,7 +456,7 @@
                       "key": "ry3s4yjdj1",
                       "isDeprecated": false,
                       "rightColumn": 62,
-                      "textAlign": "LEFT",
+                      "textAlign": "CENTER",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "gku16zay1s",
                       "minWidth": 450,
@@ -479,7 +473,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "mobileLeftColumn": 6,
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 27,
+                      "originalBottomRow": 28,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     },
@@ -493,8 +487,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 27,
-                      "bottomRow": 31,
+                      "topRow": 28,
+                      "bottomRow": 32,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -514,18 +508,15 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "text"
                         }
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "{{getThisCustomer.data?.filter((item,idx)=> true).length <2 ? \"Quên mật khẩu?\" : \"Kết nối mạng kém, vui lòng thử lại sau!\"}}",
+                      "text": "Quên mật khẩu?",
                       "key": "ykppqof1v2",
                       "isDeprecated": false,
                       "rightColumn": 58,
-                      "textAlign": "CENTER",
+                      "textAlign": "RIGHT",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "39wkwluahv",
                       "minWidth": 450,
@@ -538,11 +529,11 @@
                       "isLoading": false,
                       "mobileTopRow": 27,
                       "responsiveBehavior": "fill",
-                      "originalTopRow": 27,
+                      "originalTopRow": 28,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "mobileLeftColumn": 22,
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 31,
+                      "originalBottomRow": 32,
                       "fontSize": "0.875rem",
                       "minDynamicHeight": 4
                     }
@@ -570,7 +561,7 @@
               "key": "jynud1hne0",
               "backgroundColor": "#dbeafe",
               "isDeprecated": false,
-              "rightColumn": 61,
+              "rightColumn": 58,
               "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "a3hecod1nc",
               "minWidth": 450,
@@ -584,34 +575,12 @@
               "borderRadius": "1.5rem",
               "mobileLeftColumn": 13,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 48,
+              "originalBottomRow": 49,
               "minDynamicHeight": 10
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "RegisterLogin_getAllCustomers",
-              "name": "getAllCustomers",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "RegisterLogin_getThisCustomer",
-              "name": "getThisCustomer",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "input_password.text",
-                "input_username.text"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "RegisterLogin",

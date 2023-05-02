@@ -1,0 +1,1 @@
+SELECT * FROM customers WHERE customerID > 0 ORDER BY username DESC;

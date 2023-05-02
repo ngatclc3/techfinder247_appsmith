@@ -1,2 +1,0 @@
-INSERT INTO public."asset" ("id", "type", "make", "model", "mac_address", "serial_number", "ip_address", "image", "notes", "price")
-  VALUES (1, '', '', '', '', '', '', '', '', '');
