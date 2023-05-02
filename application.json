@@ -30,7 +30,7 @@
   "color": "#F1DEFF",
   "icon": "shopper",
   "unpublishedAppLayout": {
-    "type": "MOBILE"
+    "type": "TABLET_LARGE"
   },
   "publishedAppLayout": {
     "type": "MOBILE"
