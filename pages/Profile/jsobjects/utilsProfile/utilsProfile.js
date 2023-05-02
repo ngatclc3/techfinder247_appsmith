@@ -1,7 +1,9 @@
 export default {
 	myVar1: [],
 	myVar2: {},
+	
 	outSession: async () => {
+		
 		await storeValue('userUsername', "");
 		await storeValue('userPassword', "");
 		await storeValue('userName', "");

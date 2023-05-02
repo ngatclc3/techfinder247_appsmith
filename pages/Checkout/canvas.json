@@ -157,7 +157,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Tổng thanh toán ${{\nappsmith.store.order.reduce(\n\t//reducer function\n\t(acc, obj) => acc + obj.price*obj.qty, \t\n//initial value\t\t\t\t\t\t\t\t\t\t \n0).toFixed(2)\n}}",
+                      "text": "Tổng thanh toán ${{\nappsmith.store.order.reduce(\n\t//reducer function\n\t(acc, obj) => acc + obj.retailPrice*obj.qty, \t\n//initial value\t\t\t\t\t\t\t\t\t\t \n0).toFixed(2)\n}}",
                       "key": "elj90f75an",
                       "isDeprecated": false,
                       "rightColumn": 64,
@@ -297,7 +297,7 @@
                         }
                       },
                       "borderRadius": "0px",
-                      "columnUpdatedAt": 1683006868766,
+                      "columnUpdatedAt": 1683014433100,
                       "primaryColumnId": "model",
                       "defaultSelectedRowIndices": [
                         0
@@ -306,12 +306,12 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "image",
-                        "model",
                         "qty",
                         "retailPrice",
-                        "productID",
                         "productName",
-                        "customColumn2"
+                        "customColumn2",
+                        "model",
+                        "productID"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -325,12 +325,13 @@
                         "task": 245,
                         "step": 62,
                         "status": 75,
-                        "qty": 121,
+                        "qty": 109,
                         "price": 105,
                         "model": 137,
                         "customColumn2": 106,
-                        "image": 88,
-                        "make": 427
+                        "image": 80,
+                        "make": 427,
+                        "retailPrice": 115
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -420,7 +421,7 @@
                           "label": "Tổng",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( '$' + parseFloat(currentRow.qty * currentRow.price).toFixed(2)))}}",
+                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( '$' + parseFloat(currentRow.qty * currentRow.retailPrice).toFixed(2)))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF",
                           "validation": {},
@@ -538,10 +539,10 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "Giá",
+                          "label": "Đơn giá",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"retailPrice\"]))}}",
+                          "computedValue": "{{tbl_cart.processedTableData.map((currentRow, currentIndex) => ( '$' + currentRow[\"retailPrice\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": ""

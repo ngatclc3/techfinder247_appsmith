@@ -1,5 +1,21 @@
 export default {
-	onOpen: async () =>{
+	onOpen: async () => {
+		
+		const hasVisited = localStorage.getItem('hasVisited');
+		// Check if the "hasVisited" key has a truthy value (i.e., not null, undefined, false, 0, etc.)
+		if (!hasVisited) {
+			await storeValue('userUsername', "");
+			await storeValue('userPassword', "");
+			await storeValue('userName', "");
+			await storeValue('userEmail', "");
+			await storeValue('userPhone', "");
+			await storeValue('userAddress', "");
+			await storeValue('userDOB', "");
+			await storeValue('userGender', "");
+
+			localStorage.setItem('hasVisited', 'true');
+		}
+
 		await storeValue('cart', appsmith.store?.cart || [])
 		await storeValue('search', appsmith.store?.search || '')
 		await storeValue('filter', appsmith.store?.filter || '')
@@ -17,12 +33,12 @@ export default {
         existingProduct.qty += 1;
     } else {
         appsmith.store.cart.push({
-            productID: lst_productList.selectedItem.productID,
-            productName: lst_productList.selectedItem.productName,
-            model: lst_productList.selectedItem.model,
-            qty: 1,
-            retailPrice: lst_productList.selectedItem.retailPrice,
-            image: lst_productList.selectedItem.image
+					productID: lst_productList.selectedItem.productID,
+					productName: lst_productList.selectedItem.productName,
+					model: lst_productList.selectedItem.model,
+					qty: 1,
+					retailPrice: lst_productList.selectedItem.retailPrice,
+					image: lst_productList.selectedItem.image
         });
     }
     await storeValue('cart', appsmith.store.cart);

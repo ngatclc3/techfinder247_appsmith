@@ -29,7 +29,7 @@ export default {
 	onSession: async (username, password) => {
 		await storeValue('userUsername', username);
 		await storeValue('userPassword', password);
-		showAlert('Đăng nhập thành công');
+		showAlert('Đăng nhập thành công','success');
 		await navigateTo('Homepage');
 	},
 	

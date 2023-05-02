@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 490,
+          "bottomRow": 480,
           "containerStyle": "none",
           "snapRows": 84,
           "parentRowSpace": 1,
@@ -45,7 +45,7 @@
                 "group"
               ],
               "topRow": 11,
-              "bottomRow": 49,
+              "bottomRow": 48,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -62,7 +62,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -137,7 +137,7 @@
                       "boxShadow": "none",
                       "mobileBottomRow": 37,
                       "widgetName": "btn_login",
-                      "onClick": "{{utilsLoginRegisterPage.countUser() < 1 || utilsLoginRegisterPage.countUser() > 1 ? showAlert('Đăng nhập thất bại') : utilsLoginRegisterPage.onSession(input_username.text, input_password.text)}}\n",
+                      "onClick": "{{utilsLoginRegisterPage.countUser() < 1 || utilsLoginRegisterPage.countUser() > 1 ? showAlert('Đăng nhập thất bại','warning') : utilsLoginRegisterPage.onSession(input_username.text, input_password.text)}}\n",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -150,8 +150,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 32,
-                      "bottomRow": 36,
+                      "topRow": 31,
+                      "bottomRow": 35,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "mobileRightColumn": 62,
@@ -199,7 +199,7 @@
                       "boxShadow": "none",
                       "mobileBottomRow": 37,
                       "widgetName": "btn_register",
-                      "onClick": "{{utilsLoginRegisterPage.countUser() < 0 || utilsLoginRegisterPage.countUser() > 0  ? showAlert('Đăng ký thất bại') : addUser.run() && showAlert('Đăng ký thành công') && utilsLoginRegisterPage.onSession(input_username.text, input_password.text)}}",
+                      "onClick": "{{utilsLoginRegisterPage.countUser() < 0 || utilsLoginRegisterPage.countUser() > 0  ? showAlert('Đăng ký thất bại','warning') : addUser.run() && showAlert('Đăng ký thành công', 'success') && utilsLoginRegisterPage.onSession(input_username.text, input_password.text)}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -212,8 +212,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 32,
-                      "bottomRow": 36,
+                      "topRow": 31,
+                      "bottomRow": 35,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "mobileRightColumn": 46,
@@ -428,7 +428,7 @@
                         "label"
                       ],
                       "topRow": 23,
-                      "bottomRow": 28,
+                      "bottomRow": 27,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -438,7 +438,7 @@
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 5.8896484375,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 2,
+                      "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -455,7 +455,7 @@
                       "text": "Nếu chưa có tài khoản, hãy đăng ký trước!",
                       "key": "ry3s4yjdj1",
                       "isDeprecated": false,
-                      "rightColumn": 62,
+                      "rightColumn": 64,
                       "textAlign": "CENTER",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "gku16zay1s",
@@ -474,7 +474,7 @@
                       "mobileLeftColumn": 6,
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 28,
-                      "fontSize": "1rem",
+                      "fontSize": "0.875rem",
                       "minDynamicHeight": 4
                     },
                     {
@@ -487,8 +487,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 28,
-                      "bottomRow": 32,
+                      "topRow": 27,
+                      "bottomRow": 31,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -515,7 +515,7 @@
                       "text": "Quên mật khẩu?",
                       "key": "ykppqof1v2",
                       "isDeprecated": false,
-                      "rightColumn": 58,
+                      "rightColumn": 59,
                       "textAlign": "RIGHT",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "39wkwluahv",
@@ -575,7 +575,7 @@
               "borderRadius": "1.5rem",
               "mobileLeftColumn": 13,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 49,
+              "originalBottomRow": 48,
               "minDynamicHeight": 10
             }
           ]
