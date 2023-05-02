@@ -2,7 +2,7 @@ export default {
 	myVar1: [],
 	myVar2: {},
 	
-	outSession: async () => {
+	terminateSession: async () => {
 		
 		await storeValue('userUsername', "");
 		await storeValue('userPassword', "");
@@ -12,10 +12,16 @@ export default {
 		await storeValue('userAddress', "");
 		await storeValue('userDOB', "");
 		await storeValue('userGender', "");
-	
-		navigateTo('RegisterLogin');
+		
+		await storeValue('cart',[]);
+		await storeValue('search','');
+		await storeValue('filter','');
+		
 		resetWidget('lst_cart');
-
+		resetWidget('lst_cart');
+		resetWidget('sel_productTypeFilter');
+		
+		navigateTo('RegisterLogin');
 	},
 	
 	

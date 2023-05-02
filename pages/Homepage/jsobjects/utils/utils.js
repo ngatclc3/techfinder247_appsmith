@@ -4,6 +4,7 @@ export default {
 		const hasVisited = localStorage.getItem('hasVisited');
 		// Check if the "hasVisited" key has a truthy value (i.e., not null, undefined, false, 0, etc.)
 		if (!hasVisited) {
+			await storeValue('userUserID', "");
 			await storeValue('userUsername', "");
 			await storeValue('userPassword', "");
 			await storeValue('userName', "");
@@ -19,9 +20,13 @@ export default {
 		await storeValue('cart', appsmith.store?.cart || [])
 		await storeValue('search', appsmith.store?.search || '')
 		await storeValue('filter', appsmith.store?.filter || '')
+		
+		closeModal('mdl_confirm');
+		closeModal('mdl_productDetail');
+		closeModal('mdl_cart');
 	},
 
-	resetCart: () =>{
+	resetCart: () => {
 		storeValue('cart',[]);
 		resetWidget('lst_cart');
 	},
@@ -103,6 +108,31 @@ export default {
 		return outputProps.map(prop => output[prop])
 	},
 	
+	createOrder: async () => {
+		const orderId = BigInt(Date.now().toString() + Math.floor(Math.random() * 1000000).toString()).toString().substr(0, 11);
+		console.log(orderId);
+		await storeValue('orderID', orderId);
+		
+		addOrder.run();
+		addPayment.run();
+		
+		 /*
+			* This code below is to add each product of order into orderdetails table 
+			*/
+		let lineNumber = 1;
+		for (const order in appsmith.store.order) {
+			storeValue('orderdetailsProductID', order.productID)
+			storeValue('orderdetailsQuantityOrdered', order.quantityOrdered)
+			storeValue('orderdetailsPriceEach', order.priceEach)
+			storeValue('orderdetailsOrderLineNumber', lineNumber)
+			
+			addOrderDetails.run()
+			lineNumber++;
+		}
+
+		
+		
+	}
 
 	
 	// getSortOptions: (data, labelKey, valueKey = 'id', sortOptions = []) => {

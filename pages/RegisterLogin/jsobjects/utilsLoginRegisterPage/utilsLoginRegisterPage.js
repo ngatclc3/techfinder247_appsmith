@@ -5,6 +5,7 @@ export default {
 				const result = await getThisUser.run();
 				
 				if (result.length > 0) {
+					  await storeValue('userID', result[0].customerID);
             await storeValue('userName', result[0].customerName);
             await storeValue('userEmail', result[0].email);
             await storeValue('userPhone', result[0].phone);

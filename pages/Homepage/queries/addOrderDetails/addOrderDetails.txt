@@ -1,0 +1,9 @@
+
+INSERT INTO orderdetails (orderID, productID, quantityOrdered, priceEach, orderLineNumber)
+VALUES (
+    {{appsmith.store.orderId}},
+    {{appsmith.store.orderdetailsProductID}},
+    {{appsmith.store.orderdetailsQuantityOrdered}},
+    {{appsmith.store.orderdetailsPriceEach}},
+    {{appsmith.store.orderdetailsOrderLineNumber}}
+);

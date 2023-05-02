@@ -1032,7 +1032,7 @@
             {
               "boxShadow": "none",
               "widgetName": "cartButton",
-              "onClick": "{{showModal('mdl_cart');\nshowAlert(\"\", '')}}",
+              "onClick": "{{showModal('mdl_cart');}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "displayName": "Icon Button",
               "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -1476,7 +1476,7 @@
               "enableDownload": false,
               "originalTopRow": 11,
               "borderRadius": "0.375rem",
-              "originalBottomRow": 37,
+              "originalBottomRow": 36,
               "enableRotation": false
             },
             {
@@ -4233,7 +4233,7 @@
                         "label"
                       ],
                       "topRow": 23,
-                      "bottomRow": 29,
+                      "bottomRow": 27,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "shouldScrollContents": true,
@@ -4863,7 +4863,7 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 38,
+                      "leftColumn": 33,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -4876,7 +4876,7 @@
                       "isDisabled": false,
                       "key": "1616e4y3wz",
                       "isDeprecated": false,
-                      "rightColumn": 49,
+                      "rightColumn": 47,
                       "isDefaultClickDisabled": true,
                       "widgetId": "8i3aiwh4a8",
                       "buttonStyle": "PRIMARY",
@@ -4895,7 +4895,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "btn_yesClearFilters",
-                      "onClick": "{{appsmith.store.userUsername ? utils.isConfirmed() : navigateTo('RegisterLogin')}}",
+                      "onClick": "{{appsmith.store.userUsername ? storeValue('orderTotalPay', appsmith.store.cart.reduce(\n\t//reducer function\n\t(acc, obj) => acc + obj.retailPrice * obj.qty, \t\n//initial value\nparseInt(rad_cart_shipping.selectedOptionValue)\n).toFixed(2)) && utils.isConfirmed() && utils.createOrder() : navigateTo('RegisterLogin')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -4918,7 +4918,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 50,
+                      "leftColumn": 47,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -5001,7 +5001,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "btn_resetFilters",
-                      "buttonColor": "#ffc13d",
+                      "buttonColor": "#eab308",
                       "dynamicPropertyPathList": [
                         {
                           "key": "iconName"
@@ -5024,9 +5024,6 @@
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
-                          "key": "borderRadius"
-                        },
-                        {
                           "key": "iconName"
                         }
                       ],
@@ -5041,7 +5038,7 @@
                       "parentId": "mrlhxm8h0k",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "borderRadius": "1.5rem",
                       "buttonVariant": "TERTIARY"
                     }
                   ],
@@ -5133,7 +5130,7 @@
                   "dynamicHeight": "FIXED",
                   "widgetId": "s4joqytjlh",
                   "isVisible": true,
-                  "fontStyle": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'BOLD,ITALIC';\n              })();\n            })}}",
+                  "fontStyle": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'BOLD';\n              })();\n            })}}",
                   "textColor": "#db2777",
                   "version": 1,
                   "parentId": "3w8t261hz5",
@@ -5193,7 +5190,7 @@
               },
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "widgetName": "lst_productList",
-              "listData": "{{getProducts.data?.filter((item,idx)=>\n\t\t\t\t\t\t\t\t\t\t\t\t\t(item.productLine == appsmith.store.search || appsmith.store.search == '' || !appsmith.store?.search) &&\n\t\t\t\t\t\t\t\t\t\t\t\t\t(['new','sale','top'].indexOf(appsmith.store.filter) == idx%3 || appsmith.store.filter == ''|| !appsmith.store?.filter))}}",
+              "listData": "{{getProducts.data?.filter((item,idx)=>\n\t\t\t\t\t\t\t\t\t\t\t\t\t(item.productLine == appsmith.store.search || appsmith.store.search == '' || !appsmith.store?.search) &&\t\t\t(['new','sale','top'].indexOf(appsmith.store.filter) == idx%3 || appsmith.store.filter == ''|| !appsmith.store?.filter))}}",
               "isCanvas": true,
               "dynamicPropertyPathList": [],
               "displayName": "List",
@@ -5363,7 +5360,7 @@
                                 "label"
                               ],
                               "topRow": 11,
-                              "bottomRow": 15,
+                              "bottomRow": 16,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -5388,7 +5385,7 @@
                               "text": "${{currentItem.retailPrice}}",
                               "key": "gfcefjn30k",
                               "isDeprecated": false,
-                              "rightColumn": 40,
+                              "rightColumn": 42,
                               "textAlign": "LEFT",
                               "dynamicHeight": "FIXED",
                               "widgetId": "s4joqytjlh",
@@ -5430,7 +5427,7 @@
                                 "minDynamicHeight": true
                               },
                               "isVisible": true,
-                              "fontStyle": "BOLD,ITALIC",
+                              "fontStyle": "BOLD",
                               "textColor": "#db2777",
                               "version": 1,
                               "parentId": "3w8t261hz5",
@@ -5470,13 +5467,13 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 41,
+                              "leftColumn": 42,
                               "dynamicBindingPathList": [],
                               "text": "Thêm",
                               "isDisabled": false,
                               "key": "fv3fbhghan",
                               "isDeprecated": false,
-                              "rightColumn": 62,
+                              "rightColumn": 63,
                               "isDefaultClickDisabled": true,
                               "iconName": "plus",
                               "dynamicHeight": "FIXED",
@@ -5505,7 +5502,7 @@
                               "displayName": "Image",
                               "iconSVG": "/static/media/icon.52d8fb963abcb95c79b10f1553389f22.svg",
                               "topRow": 1,
-                              "bottomRow": 15,
+                              "bottomRow": 16,
                               "parentRowSpace": 10,
                               "type": "IMAGE_WIDGET",
                               "hideCard": false,
@@ -5517,7 +5514,7 @@
                                 }
                               ],
                               "imageShape": "RECTANGLE",
-                              "leftColumn": 3,
+                              "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "image"
@@ -5527,7 +5524,7 @@
                               "key": "9gtz2ystf7",
                               "image": "{{currentItem.image}}",
                               "isDeprecated": false,
-                              "rightColumn": 20,
+                              "rightColumn": 21,
                               "objectFit": "contain",
                               "dynamicHeight": "FIXED",
                               "widgetId": "h4o3ys0lfs",
@@ -5734,9 +5731,9 @@
               "serverSidePaginationEnabled": false,
               "renderMode": "CANVAS",
               "isLoading": false,
-              "originalTopRow": 51,
+              "originalTopRow": 50,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 286
+              "originalBottomRow": 285
             },
             {
               "boxShadow": "none",
@@ -6072,9 +6069,7 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Homepage_utils.onOpen",
               "name": "utils.onOpen",
@@ -6082,7 +6077,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async () => {\n  const hasVisited = localStorage.getItem('hasVisited');\n  if (!hasVisited) {\n    await storeValue('userUsername', \"\");\n    await storeValue('userPassword', \"\");\n    await storeValue('userName', \"\");\n    await storeValue('userEmail', \"\");\n    await storeValue('userPhone', \"\");\n    await storeValue('userAddress', \"\");\n    await storeValue('userDOB', \"\");\n    await storeValue('userGender', \"\");\n    localStorage.setItem('hasVisited', 'true');\n  }\n  await storeValue('cart', appsmith.store?.cart || []);\n  await storeValue('search', appsmith.store?.search || '');\n  await storeValue('filter', appsmith.store?.filter || '');\n}"
+                "async () => {\n  const hasVisited = localStorage.getItem('hasVisited');\n  if (!hasVisited) {\n    await storeValue('userUserID', \"\");\n    await storeValue('userUsername', \"\");\n    await storeValue('userPassword', \"\");\n    await storeValue('userName', \"\");\n    await storeValue('userEmail', \"\");\n    await storeValue('userPhone', \"\");\n    await storeValue('userAddress', \"\");\n    await storeValue('userDOB', \"\");\n    await storeValue('userGender', \"\");\n    localStorage.setItem('hasVisited', 'true');\n  }\n  await storeValue('cart', appsmith.store?.cart || []);\n  await storeValue('search', appsmith.store?.search || '');\n  await storeValue('filter', appsmith.store?.filter || '');\n  closeModal('mdl_confirm');\n  closeModal('mdl_productDetail');\n  closeModal('mdl_cart');\n}"
               ],
               "timeoutInMillisecond": 10000
             }

@@ -1,0 +1,1 @@
+SELECT * FROM orders where orderID > 0 ORDER BY orderDate DESC LIMIT 10;

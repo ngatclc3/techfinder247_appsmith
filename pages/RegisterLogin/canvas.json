@@ -161,7 +161,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 40,
+                      "leftColumn": 39,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -186,20 +186,20 @@
                       "isLoading": false,
                       "mobileTopRow": 33,
                       "responsiveBehavior": "hug",
-                      "originalTopRow": 32,
+                      "originalTopRow": 31,
                       "disabledWhenInvalid": true,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "mobileLeftColumn": 46,
-                      "originalBottomRow": 36,
+                      "originalBottomRow": 35,
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
-                      "resetFormOnClick": true,
+                      "resetFormOnClick": false,
                       "boxShadow": "none",
                       "mobileBottomRow": 37,
                       "widgetName": "btn_register",
-                      "onClick": "{{utilsLoginRegisterPage.countUser() < 0 || utilsLoginRegisterPage.countUser() > 0  ? showAlert('Đăng ký thất bại','warning') : addUser.run() && showAlert('Đăng ký thành công', 'success') && utilsLoginRegisterPage.onSession(input_username.text, input_password.text)}}",
+                      "onClick": "{{utilsLoginRegisterPage.countUser() < 0 || utilsLoginRegisterPage.countUser() > 0  ? showAlert('Đăng ký thất bại','warning') : addUser.run() && showAlert('Đăng ký thành công', 'success')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -223,7 +223,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 21,
+                      "leftColumn": 19,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -236,7 +236,7 @@
                       "isDisabled": false,
                       "key": "0ks9mmrzxn",
                       "isDeprecated": false,
-                      "rightColumn": 40,
+                      "rightColumn": 39,
                       "isDefaultClickDisabled": true,
                       "widgetId": "6uoob8rzpt",
                       "minWidth": 120,
@@ -248,11 +248,11 @@
                       "isLoading": false,
                       "mobileTopRow": 33,
                       "responsiveBehavior": "hug",
-                      "originalTopRow": 32,
+                      "originalTopRow": 31,
                       "disabledWhenInvalid": true,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "mobileLeftColumn": 30,
-                      "originalBottomRow": 36,
+                      "originalBottomRow": 35,
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
@@ -473,7 +473,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "mobileLeftColumn": 6,
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 28,
+                      "originalBottomRow": 27,
                       "fontSize": "0.875rem",
                       "minDynamicHeight": 4
                     },
@@ -529,11 +529,11 @@
                       "isLoading": false,
                       "mobileTopRow": 27,
                       "responsiveBehavior": "fill",
-                      "originalTopRow": 28,
+                      "originalTopRow": 27,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "mobileLeftColumn": 22,
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 32,
+                      "originalBottomRow": 31,
                       "fontSize": "0.875rem",
                       "minDynamicHeight": 4
                     }
