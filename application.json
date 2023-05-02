@@ -33,7 +33,7 @@
     "type": "MOBILE"
   },
   "publishedAppLayout": {
-    "type": "TABLET_LARGE"
+    "type": "MOBILE"
   },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
