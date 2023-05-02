@@ -2356,7 +2356,7 @@
                       "text": "Giỏ hàng",
                       "key": "elj90f75an",
                       "isDeprecated": false,
-                      "rightColumn": 55,
+                      "rightColumn": 49,
                       "textAlign": "LEFT",
                       "dynamicHeight": "FIXED",
                       "widgetId": "gkxw0qr5ve",
@@ -2373,7 +2373,7 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "boxShadow": "none",
+                      "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
                       "widgetName": "btn_backFromCart",
                       "onClick": "{{closeModal('mdl_cart')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -2388,7 +2388,8 @@
                       "type": "ICON_BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "leftColumn": 55,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 53,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -2401,7 +2402,7 @@
                       "isDisabled": false,
                       "key": "l4qyd5if5v",
                       "isDeprecated": false,
-                      "rightColumn": 63,
+                      "rightColumn": 61,
                       "iconName": "cross",
                       "widgetId": "gw56lx9ar8",
                       "isVisible": true,
@@ -2467,6 +2468,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "rad_cart_shipping",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Radio Group",
                       "iconSVG": "/static/media/icon.ba2b2ee006e51a5c681d7964d7777481.svg",
                       "searchTags": [
@@ -2475,7 +2477,7 @@
                       "topRow": 49,
                       "bottomRow": 53,
                       "parentRowSpace": 10,
-                      "labelWidth": "13",
+                      "labelWidth": 15,
                       "type": "RADIO_GROUP_WIDGET",
                       "hideCard": false,
                       "shouldScrollContents": true,
@@ -2540,7 +2542,7 @@
                       "topRow": 53,
                       "bottomRow": 57,
                       "parentRowSpace": 10,
-                      "labelWidth": "13",
+                      "labelWidth": "15",
                       "type": "RADIO_GROUP_WIDGET",
                       "hideCard": false,
                       "shouldScrollContents": true,
@@ -2636,10 +2638,10 @@
                       "parentId": "866lsr13wt",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 57,
+                      "originalTopRow": 58,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 61,
+                      "originalBottomRow": 62,
                       "fontSize": "1.5rem",
                       "minDynamicHeight": 4
                     },
@@ -2676,7 +2678,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 42,
+                      "leftColumn": 35,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -2692,7 +2694,7 @@
                       "isDisabled": "{{appsmith.store?.cart?.length == 0}}",
                       "key": "wkvu0t4ksf",
                       "isDeprecated": false,
-                      "rightColumn": 61,
+                      "rightColumn": 60,
                       "isDefaultClickDisabled": true,
                       "widgetId": "lqsn20wz8q",
                       "isVisible": true,
@@ -3756,7 +3758,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 50,
+                      "leftColumn": 43,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -3769,7 +3771,7 @@
                       "isDisabled": false,
                       "key": "gjiy8bnns1",
                       "isDeprecated": false,
-                      "rightColumn": 63,
+                      "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "g0upstqm1r",
                       "isVisible": true,
@@ -4141,7 +4143,7 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "boxShadow": "none",
+                      "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
                       "widgetName": "btn_backButton",
                       "onClick": "{{closeModal('mdl_productDetail');}}",
                       "buttonColor": "#18181b",
@@ -4172,7 +4174,7 @@
                       "isDisabled": false,
                       "key": "g79uvgugei",
                       "isDeprecated": false,
-                      "rightColumn": 8,
+                      "rightColumn": 9,
                       "iconName": "arrow-left",
                       "widgetId": "jpea7hlrlg",
                       "isVisible": true,
@@ -4239,7 +4241,7 @@
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 0,
+                      "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
                           "key": "fontFamily"
@@ -4307,7 +4309,7 @@
                       "text": "${{lst_productList.selectedItem.retailPrice}}",
                       "key": "kdduno4axh",
                       "isDeprecated": false,
-                      "rightColumn": 64,
+                      "rightColumn": 62,
                       "textAlign": "CENTER",
                       "dynamicHeight": "FIXED",
                       "widgetId": "3ycjyo1sj3",
@@ -4512,7 +4514,7 @@
                               "isLoading": false,
                               "defaultRate": "{{ lst_productList.selectedItem.rating ? Math.round(lst_productList.selectedItem.rating * 2) / 2 : 0 }}\n",
                               "originalTopRow": 0,
-                              "activeColor": "#1d4ed8",
+                              "activeColor": "#ffff00",
                               "size": "SMALL",
                               "maxDynamicHeight": 9000,
                               "isAllowHalf": false,
@@ -4587,7 +4589,7 @@
                       "fontFamily": "System Default",
                       "parentColumnSpace": 6.4921875,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
+                      "leftColumn": 3,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -4600,7 +4602,7 @@
                       "text": "{{lst_productList.selectedItem.productDescription ? lst_productList.selectedItem.productDescription : \"Chưa có thông tin sản phẩm.\"}}",
                       "key": "kdduno4axh",
                       "isDeprecated": false,
-                      "rightColumn": 62,
+                      "rightColumn": 59,
                       "backgroundColor": "transparent",
                       "textAlign": "JUSTIFY",
                       "dynamicHeight": "FIXED",
@@ -4624,7 +4626,7 @@
                       "boxShadow": "none",
                       "widgetName": "btn_productDetailAddToCart",
                       "onClick": "{{utils.addToCart();}}",
-                      "buttonColor": "#1d4ed8",
+                      "buttonColor": "#0891b2",
                       "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -5083,7 +5085,8 @@
                   "widgetName": "img_productImage",
                   "borderRadius": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '0px';\n              })();\n            })}}",
                   "objectFit": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'contain';\n              })();\n            })}}",
-                  "onClick": "{{showModal('mdl_productDetail')}}"
+                  "onClick": "{{showModal('mdl_productDetail')}}",
+                  "boxShadow": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'none';\n              })();\n            })}}"
                 },
                 "txt_productTitle": {
                   "text": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.productName + '\\n[model: ' + currentItem.model + ']';\n              })();\n            })}}",
@@ -5177,7 +5180,7 @@
                   "renderMode": "CANVAS",
                   "isLoading": false,
                   "disabledWhenInvalid": false,
-                  "borderRadius": "0.375rem",
+                  "borderRadius": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '0.375rem';\n              })();\n            })}}",
                   "buttonVariant": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'SECONDARY';\n              })();\n            })}}",
                   "iconAlign": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'left';\n              })();\n            })}}",
                   "placement": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'CENTER';\n              })();\n            })}}",
@@ -5192,11 +5195,7 @@
               "widgetName": "lst_productList",
               "listData": "{{getProducts.data?.filter((item,idx)=>\n\t\t\t\t\t\t\t\t\t\t\t\t\t(item.productLine == appsmith.store.search || appsmith.store.search == '' || !appsmith.store?.search) &&\n\t\t\t\t\t\t\t\t\t\t\t\t\t(['new','sale','top'].indexOf(appsmith.store.filter) == idx%3 || appsmith.store.filter == ''|| !appsmith.store?.filter))}}",
               "isCanvas": true,
-              "dynamicPropertyPathList": [
-                {
-                  "key": "onListItemClick"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "List",
               "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
               "topRow": 49,
@@ -5270,6 +5269,12 @@
                 },
                 {
                   "key": "backgroundColor"
+                },
+                {
+                  "key": "template.img_productImage.boxShadow"
+                },
+                {
+                  "key": "template.btn_addToCart.borderRadius"
                 }
               ],
               "gridType": "vertical",
@@ -6034,7 +6039,7 @@
               "isDisabled": false,
               "key": "3cio89vx1h",
               "isDeprecated": false,
-              "rightColumn": 53,
+              "rightColumn": 54,
               "isDefaultClickDisabled": true,
               "iconName": "sort-alphabetical-desc",
               "widgetId": "2wf778ag50",
@@ -6067,7 +6072,9 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Homepage_utils.onOpen",
               "name": "utils.onOpen",
