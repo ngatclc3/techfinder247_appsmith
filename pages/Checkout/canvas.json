@@ -158,7 +158,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Tổng thanh toán ${{\nappsmith.store.order.reduce(\n\t//reducer function\n\t(acc, obj) => acc + obj.retailPrice*obj.qty, \t\n//initial value\t\n0).toFixed(2)\n}}",
+                      "text": "Tổng thanh toán ${{\nappsmith.store.orderTotalPay\n}}",
                       "key": "elj90f75an",
                       "isDeprecated": false,
                       "rightColumn": 64,
@@ -383,7 +383,7 @@
                         "image": 66,
                         "make": 427,
                         "retailPrice": 97,
-                        "productName": 431
+                        "productName": 340
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -657,7 +657,7 @@
                       "dynamicHeight": "FIXED",
                       "widgetId": "gbvl7b7riq",
                       "isVisible": true,
-                      "fontStyle": "",
+                      "fontStyle": "BOLD",
                       "textColor": "#999999",
                       "version": 1,
                       "parentId": "11le3tas5h",

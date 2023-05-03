@@ -1,9 +1,7 @@
 export default {
 
 	onOpen: async () => {
-	
 
 	}
-
 
 }

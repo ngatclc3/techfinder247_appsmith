@@ -5,15 +5,15 @@
       "isDefault": true
     },
     {
-      "id": "Checkout",
-      "isDefault": false
-    },
-    {
       "id": "RegisterLogin",
       "isDefault": false
     },
     {
       "id": "Profile",
+      "isDefault": false
+    },
+    {
+      "id": "Checkout",
       "isDefault": false
     }
   ],

@@ -1,7 +1,8 @@
-INSERT INTO payments (paymentID, customerID, amount, paymentMethod)
+INSERT INTO payments (paymentID, customerID, paymentDate, amount, paymentMethod)
 VALUES (
 	'{{appsmith.store.paymentID}}',
 	{{appsmith.store.userID}}, 
+	NOW(),
 	{{appsmith.store.orderTotalPay}}, 
 	'COD'
 );

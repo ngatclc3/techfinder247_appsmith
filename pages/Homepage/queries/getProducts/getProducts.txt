@@ -1,4 +1,4 @@
-SELECT * FROM products LIMIT 250;
+SELECT * FROM products LIMIT 252;
 -- SELECT * FROM (
   -- SELECT * FROM products LIMIT 250
 -- ) p

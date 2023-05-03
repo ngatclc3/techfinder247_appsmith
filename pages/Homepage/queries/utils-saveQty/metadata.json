@@ -22,7 +22,7 @@
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {
-          "name": "qty"
+          "name": "_qty"
         },
         {
           "name": "itemId"

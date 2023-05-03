@@ -4,7 +4,7 @@ export default {
 		const hasVisited = localStorage.getItem('hasVisited');
 		// Check if the "hasVisited" key has a truthy value (i.e., not null, undefined, false, 0, etc.)
 		if (!hasVisited) {
-			await storeValue('userUserID', "");
+			await storeValue('userID', "");
 			await storeValue('userUsername', "");
 			await storeValue('userPassword', "");
 			await storeValue('userName', "");
@@ -51,12 +51,14 @@ export default {
 		await showAlert(`${lst_productList.selectedItem.productLine} đã thêm vào giỏ hàng`, 'info');
 	},
 
-	saveQty: async (qty, itemId)=>{
-		let cart = appsmith.store.cart;
-		let cartRow = cart.findIndex(item => item.productID == itemId);
-		cart[cartRow].qty = qty;
-		await storeValue('cart',cart);
-		await resetWidget('lst_cart')
+	saveQty: async (_qty, itemId) => {
+		let cart = appsmith.store.cart; 
+		let cartRow = cart.findIndex(item => item.productID === itemId);
+		if (cartRow >= 0) { // as a null-check here
+			cart[cartRow].qty = _qty;
+			await storeValue('cart', cart);
+			// await resetWidget('lst_cart'); // this causes bug: infinite list and disappear items in list (???)
+		}
 	},
 
 	showConfirm: async (title, message, icon) => {
@@ -82,7 +84,10 @@ export default {
 				break;
 			// case 'CHECKOUT':
 			case 'THANH TOÁN':
+				storeValue('order', appsmith.store.cart)
+				utils.createOrder();
 				navigateTo('Checkout','SAME_WINDOW');
+				utils.resetCart()
 				break;
 			// case 'RESET FILTERS':
 			case 'ĐẶT LẠI BỘ LỌC':
@@ -114,26 +119,24 @@ export default {
 		// showAlert(`paymentID: ${paymentID}`, 'info');
 
 		if (orderID > 0 && paymentID > 0) {
-				await storeValue('orderID', orderID);
-				await storeValue('paymentID', paymentID);
+				storeValue('orderID', orderID);
+				storeValue('paymentID', paymentID);
 
-				addOrder.run();
-				addPayment.run();
+				await addOrder.run();
+				await addPayment.run();
 
 				 /*
 					* This code below is to add each product of order into orderdetails table 
 					*/
 				let lineNumber = 1;
 				for (let order of appsmith.store.order) { // SHIT BUG: SYNTAX IS "OF", NOT "IN"
-					// await showAlert(`productID: ${order.productID}`, 'info');
-					// await showAlert(`qty: ${order.qty}`, 'info');
-					// await showAlert(`retailPrice: ${order.retailPrice}`, 'info');
-					// await showAlert(`lineNumber: ${lineNumber}`, 'info');
 
 					storeValue('orderdetailsProductID', order.productID);
 					storeValue('orderdetailsQuantityOrdered', order.qty);
 					storeValue('orderdetailsPriceEach', order.retailPrice);
 					storeValue('orderdetailsOrderLineNumber', lineNumber);
+					
+					// showAlert(`orderdetails productID: ${order.productID}`, 'info');
 
 					addOrderDetails.run();
 					lineNumber++;
@@ -143,25 +146,9 @@ export default {
 	},
 	
 		
-	// showMyOrders: async () => {
-    // await closeModal('mod_productDetail');
-    // const existingProduct = appsmith.store.cart.find(product => product.productID === lst_productList.selectedItem.productID);
-    // if (existingProduct) {
-        // existingProduct.qty += 1;
-    // } else {
-        // appsmith.store.cart.push({
-					// productID: lst_productList.selectedItem.productID,
-					// productName: lst_productList.selectedItem.productName,
-					// model: lst_productList.selectedItem.model,
-					// qty: 1,
-					// retailPrice: lst_productList.selectedItem.retailPrice,
-					// image: lst_productList.selectedItem.image
-        // });
-    // }
-    // await storeValue('cart', appsmith.store.cart);
-    // // await showAlert(`${lst_productList.selectedItem.model} added to cart`, 'info');
-		// await showAlert(`${lst_productList.selectedItem.productLine} đã thêm vào giỏ hàng`, 'info');
-	// },
+	showMyOrdersHistory: async () => {
+
+	},
 
 	
 	// getSortOptions: (data, labelKey, valueKey = 'id', sortOptions = []) => {

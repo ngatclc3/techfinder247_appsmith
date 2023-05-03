@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO payments (paymentID, customerID, amount, paymentMethod)\nVALUES (\n\t'{{appsmith.store.paymentID}}',\n\t{{appsmith.store.userID}}, \n\t{{appsmith.store.orderTotalPay}}, \n\t'COD'\n);",
+      "body": "INSERT INTO payments (paymentID, customerID, paymentDate, amount, paymentMethod)\nVALUES (\n\t'{{appsmith.store.paymentID}}',\n\t{{appsmith.store.userID}}, \n\tNOW(),\n\t{{appsmith.store.orderTotalPay}}, \n\t'COD'\n);",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
