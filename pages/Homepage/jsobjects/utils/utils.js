@@ -110,8 +110,8 @@ export default {
 	createOrder: async () => {
 		const orderID = BigInt(Date.now().toString() + Math.floor(Math.random() * 1000000).toString()).toString().substr(0, 10);
 		const paymentID = BigInt(Date.now().toString() + Math.floor(Math.random() * 1000000).toString()).toString().substr(0, 8);
-		showAlert(`orderID: ${orderID}`, 'info');
-		showAlert(`paymentID: ${paymentID}`, 'info');
+		// showAlert(`orderID: ${orderID}`, 'info');
+		// showAlert(`paymentID: ${paymentID}`, 'info');
 
 		if (orderID > 0 && paymentID > 0) {
 				await storeValue('orderID', orderID);
@@ -125,10 +125,10 @@ export default {
 					*/
 				let lineNumber = 1;
 				for (let order of appsmith.store.order) { // SHIT BUG: SYNTAX IS "OF", NOT "IN"
-					await showAlert(`productID: ${order.productID}`, 'info');
-					await showAlert(`qty: ${order.qty}`, 'info');
-					await showAlert(`retailPrice: ${order.retailPrice}`, 'info');
-					await showAlert(`lineNumber: ${lineNumber}`, 'info');
+					// await showAlert(`productID: ${order.productID}`, 'info');
+					// await showAlert(`qty: ${order.qty}`, 'info');
+					// await showAlert(`retailPrice: ${order.retailPrice}`, 'info');
+					// await showAlert(`lineNumber: ${lineNumber}`, 'info');
 
 					storeValue('orderdetailsProductID', order.productID);
 					storeValue('orderdetailsQuantityOrdered', order.qty);

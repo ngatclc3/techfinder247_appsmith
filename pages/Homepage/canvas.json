@@ -994,8 +994,12 @@
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
               "leftColumn": 58,
-              "dynamicBindingPathList": [],
-              "text": "0",
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{appsmith.store.order.reduce(\n\t//reducer function\n\t(acc, obj) => acc + parseInt(obj.qty), \n//initial value\n\t0)\n}}",
               "isDisabled": false,
               "key": "q6k0lq3ny3",
               "isDeprecated": false,
