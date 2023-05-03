@@ -14,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 2650,
+          "bottomRow": 2610,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -38,8 +38,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 42,
-              "bottomRow": 46,
+              "topRow": 39,
+              "bottomRow": 43,
               "tooltip": "Đặt lại bộ lọc",
               "parentRowSpace": 10,
               "type": "ICON_BUTTON_WIDGET",
@@ -51,7 +51,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 60,
+              "leftColumn": 59,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -63,7 +63,7 @@
               "isDisabled": false,
               "key": "ri558bfp3d",
               "isDeprecated": false,
-              "rightColumn": 64,
+              "rightColumn": 63,
               "iconName": "reset",
               "widgetId": "nkzhhg5w76",
               "isVisible": true,
@@ -942,8 +942,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 6,
-              "bottomRow": 10,
+              "topRow": 4,
+              "bottomRow": 8,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -960,7 +960,7 @@
               "isDisabled": false,
               "key": "q6k0lq3ny3",
               "isDeprecated": false,
-              "rightColumn": 60,
+              "rightColumn": 61,
               "isDefaultClickDisabled": true,
               "widgetId": "plhg52j2zz",
               "isVisible": true,
@@ -985,8 +985,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 2,
-              "bottomRow": 6,
+              "topRow": 0,
+              "bottomRow": 4,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -1023,8 +1023,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 1,
-              "bottomRow": 5,
+              "topRow": 0,
+              "bottomRow": 4,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -1079,8 +1079,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 6,
-              "bottomRow": 10,
+              "topRow": 4,
+              "bottomRow": 8,
               "tooltip": "Giỏ hàng",
               "parentRowSpace": 10,
               "type": "ICON_BUTTON_WIDGET",
@@ -1488,8 +1488,8 @@
               "widgetName": "img_headerImage",
               "displayName": "Image",
               "iconSVG": "/static/media/icon.52d8fb963abcb95c79b10f1553389f22.svg",
-              "topRow": 12,
-              "bottomRow": 37,
+              "topRow": 8,
+              "bottomRow": 33,
               "parentRowSpace": 10,
               "type": "IMAGE_WIDGET",
               "hideCard": false,
@@ -1538,8 +1538,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 37,
-              "bottomRow": 42,
+              "topRow": 33,
+              "bottomRow": 38,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -1599,8 +1599,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 37,
-              "bottomRow": 42,
+              "topRow": 33,
+              "bottomRow": 38,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -1657,8 +1657,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 37,
-              "bottomRow": 42,
+              "topRow": 34,
+              "bottomRow": 39,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -1707,8 +1707,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 46,
-              "bottomRow": 50,
+              "topRow": 42,
+              "bottomRow": 46,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -1717,7 +1717,7 @@
               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "parentColumnSpace": 12.0703125,
               "dynamicTriggerPathList": [],
-              "leftColumn": 1,
+              "leftColumn": 2,
               "dynamicBindingPathList": [
                 {
                   "key": "fontFamily"
@@ -1734,7 +1734,7 @@
               "text": "{{lst_productList.listData ? lst_productList.listData.length : 0}} kết quả",
               "key": "9ym36ym6vr",
               "isDeprecated": false,
-              "rightColumn": 21,
+              "rightColumn": 22,
               "textAlign": "LEFT",
               "dynamicHeight": "FIXED",
               "widgetId": "rff2vtn75w",
@@ -2516,7 +2516,7 @@
                       "topRow": 31,
                       "bottomRow": 39,
                       "parentRowSpace": 10,
-                      "labelWidth": 15,
+                      "labelWidth": "15",
                       "type": "RADIO_GROUP_WIDGET",
                       "hideCard": false,
                       "shouldScrollContents": true,
@@ -2677,10 +2677,10 @@
                       "parentId": "866lsr13wt",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 54,
+                      "originalTopRow": 44,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 58,
+                      "originalBottomRow": 48,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     },
@@ -2742,10 +2742,10 @@
                       "parentId": "866lsr13wt",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 53,
+                      "originalTopRow": 43,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "originalBottomRow": 58,
+                      "originalBottomRow": 48,
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
@@ -2955,7 +2955,7 @@
                           "renderMode": "CANVAS",
                           "isLoading": false,
                           "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "buttonVariant": "SECONDARY",
+                          "buttonVariant": "{{lst_cart.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'TERTIARY';\n              })();\n            })}}",
                           "onClick": "{{utils.saveQty(parseInt(currentItem.qty) + 1,currentItem.productID)}}"
                         },
                         "btn_reduceQty": {
@@ -2994,7 +2994,7 @@
                           "renderMode": "CANVAS",
                           "isLoading": false,
                           "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "buttonVariant": "{{lst_cart.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'SECONDARY';\n              })();\n            })}}",
+                          "buttonVariant": "{{lst_cart.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'TERTIARY';\n              })();\n            })}}",
                           "onClick": "{{utils.saveQty( \nMath.max( parseInt( currentItem.qty) - 1, 1), currentItem.productID)}}"
                         },
                         "txt_cartQty": {
@@ -3088,6 +3088,9 @@
                         },
                         {
                           "key": "template.cartProductName.fontSize"
+                        },
+                        {
+                          "key": "template.btn_increaseQty.buttonVariant"
                         }
                       ],
                       "gridType": "vertical",
@@ -3306,7 +3309,7 @@
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                                      "buttonVariant": "SECONDARY"
+                                      "buttonVariant": "TERTIARY"
                                     },
                                     {
                                       "boxShadow": "none",
@@ -3355,7 +3358,7 @@
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                                      "buttonVariant": "SECONDARY"
+                                      "buttonVariant": "TERTIARY"
                                     },
                                     {
                                       "boxShadow": "none",
@@ -4427,7 +4430,7 @@
                                 "label"
                               ],
                               "topRow": 0,
-                              "bottomRow": 5,
+                              "bottomRow": 4,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -4543,7 +4546,7 @@
                                   "key": "defaultRate"
                                 }
                               ],
-                              "isDisabled": true,
+                              "isDisabled": false,
                               "key": "6y8w14xfqy",
                               "isRequired": false,
                               "isDeprecated": false,
@@ -4555,12 +4558,12 @@
                               "parentId": "crglfz69vm",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "defaultRate": "{{ lst_productList.selectedItem.rating ? Math.round(lst_productList.selectedItem.rating * 2) / 2 : 0 }}\n",
+                              "defaultRate": "{{ lst_productList.selectedItem.rating ? Math.round(lst_productList.selectedItem.rating) : 0 }}\n",
                               "originalTopRow": 0,
-                              "activeColor": "#ffff00",
+                              "activeColor": "#0891b2",
                               "size": "SMALL",
                               "maxDynamicHeight": 9000,
-                              "isAllowHalf": false,
+                              "isAllowHalf": true,
                               "originalBottomRow": 4,
                               "minDynamicHeight": 4,
                               "tooltips": "[\n  \"Terrible\",\n  \"Bad\",\n  \"Neutral\",\n  \"Good\",\n  \"Great\"\n]"
@@ -5238,8 +5241,8 @@
               "dynamicPropertyPathList": [],
               "displayName": "List",
               "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
-              "topRow": 50,
-              "bottomRow": 265,
+              "topRow": 46,
+              "bottomRow": 261,
               "parentRowSpace": 10,
               "type": "LIST_WIDGET",
               "hideCard": false,
@@ -5789,8 +5792,8 @@
               "searchTags": [
                 "dropdown"
               ],
-              "topRow": 42,
-              "bottomRow": 46,
+              "topRow": 38,
+              "bottomRow": 42,
               "parentRowSpace": 10,
               "labelWidth": 5,
               "type": "SELECT_WIDGET",
@@ -5828,7 +5831,7 @@
               "labelTextSize": "0.875rem",
               "isRequired": false,
               "isDeprecated": false,
-              "rightColumn": 24,
+              "rightColumn": 25,
               "dynamicHeight": "FIXED",
               "widgetId": "085ey9ymwc",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -5857,8 +5860,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 1,
-              "bottomRow": 5,
+              "topRow": 0,
+              "bottomRow": 4,
               "tooltip": "Trang cá nhân",
               "parentRowSpace": 10,
               "type": "ICON_BUTTON_WIDGET",
@@ -5905,8 +5908,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 5,
-              "bottomRow": 9,
+              "topRow": 4,
+              "bottomRow": 8,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -5959,13 +5962,13 @@
               "boxShadow": "none",
               "iconSVG": "/static/media/icon.a3495809ae48291a64404f3bb04b0e69.svg",
               "labelText": "",
-              "topRow": 42,
+              "topRow": 39,
               "labelWidth": 5,
               "type": "MULTI_SELECT_WIDGET_V2",
               "serverSideFiltering": false,
               "defaultOptionValue": "",
               "animateLoading": true,
-              "leftColumn": 24,
+              "leftColumn": 25,
               "dynamicBindingPathList": [
                 {
                   "key": "accentColor"
@@ -6002,7 +6005,7 @@
                 "dropdown",
                 "tags"
               ],
-              "bottomRow": 46,
+              "bottomRow": 43,
               "parentRowSpace": 10,
               "hideCard": false,
               "mobileRightColumn": 13,
@@ -6020,7 +6023,7 @@
               "key": "74r8lhm354",
               "labelTextSize": "0.875rem",
               "isDeprecated": false,
-              "rightColumn": 49,
+              "rightColumn": 50,
               "widgetId": "5jg9d3odql",
               "minWidth": 450,
               "parentId": "0",
@@ -6048,8 +6051,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 42,
-              "bottomRow": 46,
+              "topRow": 39,
+              "bottomRow": 43,
               "tooltip": "Sắp xếp giảm dần",
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
@@ -6062,7 +6065,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 49,
+              "leftColumn": 50,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -6075,7 +6078,7 @@
               "isDisabled": false,
               "key": "3cio89vx1h",
               "isDeprecated": false,
-              "rightColumn": 54,
+              "rightColumn": 55,
               "isDefaultClickDisabled": true,
               "iconName": "sort-alphabetical-desc",
               "widgetId": "2wf778ag50",
@@ -6110,8 +6113,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 2,
-              "bottomRow": 6,
+              "topRow": 0,
+              "bottomRow": 4,
               "tooltip": "Đơn hàng của tôi",
               "parentRowSpace": 10,
               "type": "ICON_BUTTON_WIDGET",
@@ -6162,7 +6165,9 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Homepage_utils.onOpen",
               "name": "utils.onOpen",
