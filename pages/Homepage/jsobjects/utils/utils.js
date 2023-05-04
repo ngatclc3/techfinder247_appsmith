@@ -122,9 +122,9 @@ export default {
 				storeValue('orderID', orderID);
 				storeValue('paymentID', paymentID);
 
-				await addOrder.run();
-				await addPayment.run();
-
+				addOrder.run();
+				addPayment.run();
+			
 				 /*
 					* This code below is to add each product of order into orderdetails table 
 					*/
@@ -141,6 +141,9 @@ export default {
 					addOrderDetails.run();
 					lineNumber++;
 				}
+			
+				let myOrder = getMyOrders.data();
+				storeValue('orderDate', myOrder[0].orderDate);
 		}
 		
 	},

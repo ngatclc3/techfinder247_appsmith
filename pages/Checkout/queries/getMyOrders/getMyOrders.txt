@@ -1,0 +1,4 @@
+SELECT p.paymentID, o.orderID, p.amount, p.paymentMethod, o.orderDate, o.shippedDate, o.status, o.comments
+FROM payments p
+JOIN orders o ON p.customerID = o.customerID
+WHERE p.customerID = '{{appsmith.store.userID}}';
