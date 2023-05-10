@@ -14,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 2610,
+          "bottomRow": 1660,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -32,6 +32,11 @@
               "widgetName": "btn_refreshFilter",
               "onClick": "{{utils.showConfirm('ĐẶT LẠI BỘ LỌC', 'Bạn chắc chắn muốn đặt lại bộ lọc?', 'warning-sign');}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
               "displayName": "Icon Button",
               "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
               "searchTags": [
@@ -51,7 +56,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 59,
+              "leftColumn": 58,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -63,7 +68,7 @@
               "isDisabled": false,
               "key": "ri558bfp3d",
               "isDeprecated": false,
-              "rightColumn": 63,
+              "rightColumn": 64,
               "iconName": "reset",
               "widgetId": "nkzhhg5w76",
               "isVisible": true,
@@ -950,7 +955,7 @@
               "animateLoading": true,
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
-              "leftColumn": 57,
+              "leftColumn": 59,
               "dynamicBindingPathList": [
                 {
                   "key": "text"
@@ -960,7 +965,7 @@
               "isDisabled": false,
               "key": "q6k0lq3ny3",
               "isDeprecated": false,
-              "rightColumn": 62,
+              "rightColumn": 64,
               "isDefaultClickDisabled": true,
               "widgetId": "plhg52j2zz",
               "isVisible": true,
@@ -984,8 +989,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 0,
-              "bottomRow": 4,
+              "topRow": 2,
+              "bottomRow": 6,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -994,7 +999,7 @@
               "fontFamily": "Montserrat",
               "parentColumnSpace": 21.8974609375,
               "dynamicTriggerPathList": [],
-              "leftColumn": 8,
+              "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -1012,7 +1017,7 @@
               "text": "TechFinder247\n",
               "key": "elj90f75an",
               "isDeprecated": false,
-              "rightColumn": 47,
+              "rightColumn": 38,
               "backgroundColor": "transparent",
               "textAlign": "LEFT",
               "dynamicHeight": "FIXED",
@@ -1053,7 +1058,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 54,
+              "leftColumn": 55,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -1065,7 +1070,7 @@
               "isDisabled": false,
               "key": "4qthd0b5g3",
               "isDeprecated": false,
-              "rightColumn": 57,
+              "rightColumn": 59,
               "iconName": "shopping-cart",
               "widgetId": "53jwk03kq3",
               "isVisible": true,
@@ -1483,12 +1488,9 @@
               "resetFormOnClick": false,
               "boxShadow": "none",
               "widgetName": "btn_whatsNew",
-              "onClick": "{{storeValue('filter',appsmith.store.filter == 'new' ? '' : 'new')}}",
+              "onClick": "{{storeValue('filter', appsmith.store.filter == 'new' ? '' : 'new');\nremoveValue('keywordsearched');\nresetWidget(\"searchProducts\", true);}}",
               "buttonColor": "#0891b2",
               "dynamicPropertyPathList": [
-                {
-                  "key": "onClick"
-                },
                 {
                   "key": "buttonVariant"
                 }
@@ -1544,14 +1546,11 @@
               "resetFormOnClick": false,
               "boxShadow": "none",
               "widgetName": "btn_onSale",
-              "onClick": "{{storeValue('filter',appsmith.store.filter == 'sale' ? '' : 'sale')}}",
+              "onClick": "{{storeValue('filter', appsmith.store.filter == 'sale' ? '' : 'sale');\nremoveValue('keywordsearched');\nresetWidget(\"searchProducts\", true);}}",
               "buttonColor": "#0891b2",
               "dynamicPropertyPathList": [
                 {
                   "key": "buttonVariant"
-                },
-                {
-                  "key": "onClick"
                 }
               ],
               "displayName": "Button",
@@ -1605,7 +1604,7 @@
               "resetFormOnClick": false,
               "boxShadow": "none",
               "widgetName": "btn_topSellers",
-              "onClick": "{{storeValue('filter',appsmith.store.filter == 'top' ? '' : 'top')}}",
+              "onClick": "{{storeValue('filter', appsmith.store.filter == 'top' ? '' : 'top');\nremoveValue('keywordsearched');\nresetWidget(\"searchProducts\", true);}}",
               "buttonColor": "#0891b2",
               "dynamicPropertyPathList": [
                 {
@@ -2499,7 +2498,7 @@
                       "onSelectionChange": "{{storeValue('paymentShippingFee', rad_cart_shipping.selectedOptionValue);}}",
                       "options": [
                         {
-                          "label": "Chuẩn: Miễn phí",
+                          "label": "Thường: Miễn phí",
                           "value": "0"
                         },
                         {
@@ -3927,13 +3926,13 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 610,
+                  "bottomRow": 650,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 618,
+                  "minHeight": 656,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
@@ -4637,9 +4636,13 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "btn_productDetailAddToCart",
-                      "onClick": "{{utils.addToCart();}}",
+                      "onClick": "{{appsmith.store.cart.length >= 5 ? showAlert('Chỉ được đặt tối đa 5 sản phẩm trong 1 đơn hàng!', 'info') : utils.addToCart();}}",
                       "buttonColor": "#0891b2",
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -4700,7 +4703,7 @@
                 }
               ],
               "key": "t7iltzuico",
-              "height": 618,
+              "height": 656,
               "isDeprecated": false,
               "rightColumn": 0,
               "detachFromLayout": true,
@@ -5099,7 +5102,7 @@
                   "widgetName": "img_productImage",
                   "borderRadius": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '0px';\n              })();\n            })}}",
                   "objectFit": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'contain';\n              })();\n            })}}",
-                  "onClick": "{{showModal('mdl_productDetail')}}",
+                  "onClick": "",
                   "boxShadow": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'none';\n              })();\n            })}}"
                 },
                 "txt_productTitle": {
@@ -5179,13 +5182,13 @@
                   "dynamicTriggerPathList": [],
                   "leftColumn": 50,
                   "dynamicBindingPathList": [],
-                  "text": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Thêm';\n              })();\n            })}}",
+                  "text": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Chi tiết';\n              })();\n            })}}",
                   "isDisabled": false,
                   "key": "fv3fbhghan",
                   "isDeprecated": false,
                   "rightColumn": 64,
                   "isDefaultClickDisabled": true,
-                  "iconName": "plus",
+                  "iconName": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'fullscreen';\n              })();\n            })}}",
                   "widgetId": "ck5sihk5fp",
                   "isVisible": true,
                   "recaptchaType": "V3",
@@ -5198,7 +5201,7 @@
                   "buttonVariant": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'SECONDARY';\n              })();\n            })}}",
                   "iconAlign": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'left';\n              })();\n            })}}",
                   "placement": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'CENTER';\n              })();\n            })}}",
-                  "onClick": "{{utils.addToCart();}}"
+                  "onClick": "{{showModal('mdl_productDetail')}}"
                 },
                 "con_productList": {
                   "isVisible": true,
@@ -5207,13 +5210,13 @@
               },
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "widgetName": "lst_productList",
-              "listData": "{{getProducts.data?.filter((item,idx) => (item.productLine == appsmith.store.search || appsmith.store.search == '' || !appsmith.store?.search) && (['new','sale','top'].indexOf(appsmith.store.filter) == idx%3 || appsmith.store.filter == ''|| !appsmith.store?.filter))}}",
+              "listData": "{{appsmith.store.keywordsearched ? getProductsSearchedName.data : getProducts.data?.filter((item,idx) => (item.productLine == appsmith.store.search || appsmith.store.search == '' || !appsmith.store?.search) && (['new','sale','top'].indexOf(appsmith.store.filter) == idx%3 || appsmith.store.filter == ''|| !appsmith.store?.filter))}}",
               "isCanvas": true,
               "dynamicPropertyPathList": [],
               "displayName": "List",
               "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
               "topRow": 46,
-              "bottomRow": 261,
+              "bottomRow": 166,
               "parentRowSpace": 10,
               "type": "LIST_WIDGET",
               "hideCard": false,
@@ -5289,6 +5292,9 @@
                 },
                 {
                   "key": "template.btn_addToCart.borderRadius"
+                },
+                {
+                  "key": "template.btn_addToCart.iconName"
                 }
               ],
               "gridType": "vertical",
@@ -5459,9 +5465,13 @@
                               "resetFormOnClick": false,
                               "boxShadow": "none",
                               "widgetName": "btn_addToCart",
-                              "onClick": "{{utils.addToCart();}}",
+                              "onClick": "{{showModal('mdl_productDetail')}}",
                               "buttonColor": "#0891b2",
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                               "searchTags": [
@@ -5482,13 +5492,13 @@
                               ],
                               "leftColumn": 42,
                               "dynamicBindingPathList": [],
-                              "text": "Thêm",
+                              "text": "Chi tiết",
                               "isDisabled": false,
                               "key": "fv3fbhghan",
                               "isDeprecated": false,
                               "rightColumn": 63,
                               "isDefaultClickDisabled": true,
-                              "iconName": "plus",
+                              "iconName": "fullscreen",
                               "dynamicHeight": "FIXED",
                               "widgetId": "ck5sihk5fp",
                               "isVisible": true,
@@ -5506,12 +5516,8 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "img_productImage",
-                              "onClick": "{{showModal('mdl_productDetail')}}",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onClick"
-                                }
-                              ],
+                              "onClick": "",
+                              "dynamicPropertyPathList": [],
                               "displayName": "Image",
                               "iconSVG": "/static/media/icon.52d8fb963abcb95c79b10f1553389f22.svg",
                               "topRow": 1,
@@ -5527,7 +5533,7 @@
                                 }
                               ],
                               "imageShape": "RECTANGLE",
-                              "leftColumn": 1,
+                              "leftColumn": 2,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "image"
@@ -5537,7 +5543,7 @@
                               "key": "9gtz2ystf7",
                               "image": "{{currentItem.image}}",
                               "isDeprecated": false,
-                              "rightColumn": 21,
+                              "rightColumn": 20,
                               "objectFit": "contain",
                               "dynamicHeight": "FIXED",
                               "widgetId": "h4o3ys0lfs",
@@ -5752,11 +5758,7 @@
               "boxShadow": "none",
               "widgetName": "sel_productTypeFilter",
               "isFilterable": false,
-              "dynamicPropertyPathList": [
-                {
-                  "key": "onOptionChange"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
               "labelText": "",
@@ -5816,23 +5818,28 @@
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
               "originalBottomRow": 46,
-              "onOptionChange": "{{storeValue('search',sel_productTypeFilter.selectedOptionLabel)}}",
+              "onOptionChange": "{{storeValue('search', sel_productTypeFilter.selectedOptionLabel);\nremoveValue('keywordsearched');\nresetWidget(\"searchProducts\", true);}}",
               "minDynamicHeight": 4
             },
             {
-              "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+              "boxShadow": "none",
               "mobileBottomRow": 6,
               "widgetName": "iconbtn_profile",
-              "onClick": "{{navigateTo('Profile', {}, 'SAME_WINDOW');}}",
+              "onClick": "{{appsmith.store.userUsername ? navigateTo('Profile', {}, 'SAME_WINDOW') : navigateTo('RegisterLogin', {}, 'SAME_WINDOW')}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
               "displayName": "Icon Button",
               "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
               "searchTags": [
                 "click",
                 "submit"
               ],
-              "topRow": 0,
-              "bottomRow": 4,
+              "topRow": 3,
+              "bottomRow": 7,
               "tooltip": "Trang cá nhân",
               "parentRowSpace": 10,
               "type": "ICON_BUTTON_WIDGET",
@@ -5845,7 +5852,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 1,
+              "leftColumn": 47,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -5854,7 +5861,7 @@
               "isDisabled": false,
               "key": "zda63afqmr",
               "isDeprecated": false,
-              "rightColumn": 8,
+              "rightColumn": 55,
               "iconName": "user",
               "widgetId": "faikbrqs96",
               "minWidth": 50,
@@ -5870,76 +5877,16 @@
               "buttonVariant": "TERTIARY"
             },
             {
-              "mobileBottomRow": 10,
-              "widgetName": "txt_storeSlogan",
-              "displayName": "Text",
-              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-              "searchTags": [
-                "typography",
-                "paragraph",
-                "label"
-              ],
-              "topRow": 4,
-              "bottomRow": 8,
-              "parentRowSpace": 10,
-              "type": "TEXT_WIDGET",
-              "hideCard": false,
-              "mobileRightColumn": 18,
-              "animateLoading": true,
-              "overflow": "NONE",
-              "fontFamily": "Noto Sans",
-              "parentColumnSpace": 6.84375,
-              "dynamicTriggerPathList": [],
-              "leftColumn": 4,
-              "dynamicBindingPathList": [
-                {
-                  "key": "truncateButtonColor"
-                },
-                {
-                  "key": "borderRadius"
-                },
-                {
-                  "key": "textColor"
-                }
-              ],
-              "shouldTruncate": false,
-              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "text": "Hành trang làm chủ cuộc sống",
-              "key": "cx1rnyl7fl",
-              "isDeprecated": false,
-              "rightColumn": 47,
-              "textAlign": "LEFT",
-              "dynamicHeight": "AUTO_HEIGHT",
-              "widgetId": "k1o5ucm87f",
-              "minWidth": 450,
-              "isVisible": true,
-              "fontStyle": "",
-              "textColor": "{{appsmith.theme.colors.primaryColor}}",
-              "version": 1,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "mobileTopRow": 6,
-              "responsiveBehavior": "fill",
-              "originalTopRow": 5,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "mobileLeftColumn": 2,
-              "maxDynamicHeight": 9000,
-              "originalBottomRow": 10,
-              "fontSize": "0.875rem",
-              "minDynamicHeight": 4
-            },
-            {
               "boxShadow": "none",
               "iconSVG": "/static/media/icon.a3495809ae48291a64404f3bb04b0e69.svg",
               "labelText": "",
-              "topRow": 38,
+              "topRow": 42,
               "labelWidth": 5,
               "type": "MULTI_SELECT_WIDGET_V2",
               "serverSideFiltering": false,
               "defaultOptionValue": "",
               "animateLoading": true,
-              "leftColumn": 25,
+              "leftColumn": 28,
               "dynamicBindingPathList": [
                 {
                   "key": "accentColor"
@@ -5949,9 +5896,9 @@
                 }
               ],
               "labelTooltip": "Sắp xếp sản phẩm",
-              "options": "[\n  {\n    \"label\": \"Tên sản phẩm\",\n    \"value\": \"productName\"\n  },\n  {\n    \"label\": \"Giá bán\",\n    \"value\": \"retailPrice\"\n  },\n  {\n    \"label\": \"Đánh giá\",\n    \"value\": \"rating\"\n  }\n]",
+              "options": "[\n  {\n    \"label\": \"Tên sản phẩm\",\n    \"value\": \"productName\"\n  },\n  {\n    \"label\": \"Giá bán\",\n    \"value\": \"retailPrice\"\n  }\n]",
               "placeholderText": "Sắp xếp",
-              "isDisabled": false,
+              "isDisabled": true,
               "isRequired": false,
               "dynamicHeight": "FIXED",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -5963,20 +5910,13 @@
               "mobileBottomRow": 48,
               "widgetName": "sel_sort",
               "isFilterable": false,
-              "dynamicPropertyPathList": [
-                {
-                  "key": "onOptionChange"
-                },
-                {
-                  "key": "onDropdownClose"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "MultiSelect",
               "searchTags": [
                 "dropdown",
                 "tags"
               ],
-              "bottomRow": 42,
+              "bottomRow": 46,
               "parentRowSpace": 10,
               "hideCard": false,
               "mobileRightColumn": 13,
@@ -5994,7 +5934,7 @@
               "key": "74r8lhm354",
               "labelTextSize": "0.875rem",
               "isDeprecated": false,
-              "rightColumn": 50,
+              "rightColumn": 54,
               "widgetId": "5jg9d3odql",
               "minWidth": 450,
               "parentId": "0",
@@ -6005,7 +5945,7 @@
               "originalTopRow": 42,
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "onOptionChange": "",
+              "onOptionChange": "{{utils.getSortOptions();}}",
               "minDynamicHeight": 4
             },
             {
@@ -6022,8 +5962,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 38,
-              "bottomRow": 42,
+              "topRow": 42,
+              "bottomRow": 46,
               "tooltip": "Sắp xếp giảm dần",
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
@@ -6036,7 +5976,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 50,
+              "leftColumn": 54,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -6046,10 +5986,10 @@
                 }
               ],
               "text": "",
-              "isDisabled": false,
+              "isDisabled": true,
               "key": "3cio89vx1h",
               "isDeprecated": false,
-              "rightColumn": 55,
+              "rightColumn": 62,
               "isDefaultClickDisabled": true,
               "iconName": "sort-alphabetical-desc",
               "widgetId": "2wf778ag50",
@@ -6070,19 +6010,84 @@
               "buttonVariant": "TERTIARY",
               "iconAlign": "left",
               "placement": "BETWEEN"
+            },
+            {
+              "boxShadow": "none",
+              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+              "onSubmit": "{{utils.isConfirmed();\nstoreValue('keywordsearched', searchProducts.text);\ngetProductsSearchedName.run();}}",
+              "topRow": 38,
+              "labelWidth": 5,
+              "type": "INPUT_WIDGET_V2",
+              "animateLoading": true,
+              "resetOnSubmit": false,
+              "leftColumn": 25,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "defaultText"
+                }
+              ],
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "placeholderText": "Nhập & Enter để tìm kiếm",
+              "isDisabled": false,
+              "isRequired": false,
+              "dynamicHeight": "FIXED",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "showStepArrows": false,
+              "isVisible": true,
+              "version": 2,
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "mobileBottomRow": 46,
+              "widgetName": "searchProducts",
+              "dynamicPropertyPathList": [],
+              "displayName": "Input",
+              "searchTags": [
+                "form",
+                "text input",
+                "number",
+                "textarea"
+              ],
+              "bottomRow": 42,
+              "parentRowSpace": 10,
+              "autoFocus": false,
+              "hideCard": false,
+              "mobileRightColumn": 20,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "labelPosition": "Top",
+              "key": "8t8xh3can7",
+              "labelTextSize": "0.875rem",
+              "isDeprecated": false,
+              "rightColumn": 58,
+              "widgetId": "jz2s5sj2qj",
+              "minWidth": 450,
+              "label": "",
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "mobileTopRow": 39,
+              "responsiveBehavior": "fill",
+              "mobileLeftColumn": 0,
+              "maxDynamicHeight": 9000,
+              "iconAlign": "left",
+              "defaultText": "{{appsmith.store.keywordsearched}}",
+              "minDynamicHeight": 4
             }
           ]
         },
         "layoutOnLoadActions": [
           [
-            {
-              "id": "Homepage_getOrders",
-              "name": "getOrders",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Homepage_getProducts",
               "name": "getProducts",

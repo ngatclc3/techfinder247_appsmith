@@ -1,0 +1,4 @@
+UPDATE products 
+SET quantityInStock = quantityInStock - {{appsmith.store.orderdetailsQuantityOrdered}} 
+WHERE productID = {{appsmith.store.orderdetailsProductID}};
+

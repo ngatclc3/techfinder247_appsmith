@@ -1,0 +1,2 @@
+SELECT * FROM products 
+WHERE productName LIKE CONCAT('%', {{appsmith.store.keywordsearched}}, '%');

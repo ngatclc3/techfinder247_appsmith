@@ -125,6 +125,11 @@ export default {
 				addOrder.run();
 				addPayment.run();
 			
+				let myOrders = getMyOrders.data();
+			
+				storeValue('orderDate', new Date(myOrders[0].orderDate).toDateString());
+				showAlert(`orderDate: ${orderDate}`, 'info');
+
 				 /*
 					* This code below is to add each product of order into orderdetails table 
 					*/
@@ -139,11 +144,11 @@ export default {
 					// showAlert(`orderdetails productID: ${order.productID}`, 'info');
 
 					addOrderDetails.run();
+					updateQtyInStock.run();
 					lineNumber++;
 				}
 			
-				let myOrder = getMyOrders.data();
-				storeValue('orderDate', myOrder[0].orderDate);
+
 		}
 		
 	},

@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "showConfirm",
-    "fullyQualifiedName": "utils.showConfirm",
+    "name": "submitPhone",
+    "fullyQualifiedName": "utilsProfile.submitPhone",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,24 +13,14 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Homepage",
-    "collectionId": "Homepage_utils",
+    "pageId": "Profile",
+    "collectionId": "Profile_utilsProfile",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {
-          "name": "title"
-        },
-        {
-          "name": "message"
-        },
-        {
-          "name": "icon"
-        }
-      ],
+      "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
@@ -39,17 +29,15 @@
         "key": "body"
       }
     ],
-    "isValid": false,
-    "invalids": [
-      "Unable to find plugin 613a26d921750e4b557a9241"
-    ],
+    "isValid": true,
+    "invalids": [],
     "messages": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Homepage_utils.showConfirm",
+  "id": "Profile_utilsProfile.submitPhone",
   "deleted": false,
-  "gitSyncId": "6449e2a801e69b53ba6da24d_6449e2a801e69b53ba6da279"
+  "gitSyncId": "644fc56dbf34ca68b34eef28_64507fa65dbc7a3c2c4fec67"
 }

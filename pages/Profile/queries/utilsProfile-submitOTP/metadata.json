@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "verifyPhoneNumber",
-    "fullyQualifiedName": "utilsProfile.verifyPhoneNumber",
+    "name": "submitOTP",
+    "fullyQualifiedName": "utilsProfile.submitOTP",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -37,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Profile_utilsProfile.verifyPhoneNumber",
+  "id": "Profile_utilsProfile.submitOTP",
   "deleted": false,
-  "gitSyncId": "644fc56dbf34ca68b34eef28_64507fa65dbc7a3c2c4fec67"
+  "gitSyncId": "6449e2a801e69b53ba6da24d_645a8969fc02ef717484c6ff"
 }
