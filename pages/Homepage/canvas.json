@@ -5190,7 +5190,7 @@
                   "isDefaultClickDisabled": true,
                   "iconName": "{{lst_productList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'fullscreen';\n              })();\n            })}}",
                   "widgetId": "ck5sihk5fp",
-                  "isVisible": true,
+                  "isVisible": false,
                   "recaptchaType": "V3",
                   "version": 1,
                   "parentId": "3w8t261hz5",
@@ -5505,7 +5505,7 @@
                               "iconName": "fullscreen",
                               "dynamicHeight": "FIXED",
                               "widgetId": "ck5sihk5fp",
-                              "isVisible": true,
+                              "isVisible": false,
                               "recaptchaType": "V3",
                               "version": 1,
                               "parentId": "3w8t261hz5",
@@ -6099,7 +6099,9 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Homepage_utils.onOpen",
               "name": "utils.onOpen",
