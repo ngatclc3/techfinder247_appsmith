@@ -95,6 +95,9 @@ export default {
 				storeValue('search','')
 				storeValue('filter','')
 				resetWidget('sel_productTypeFilter')
+				resetWidget('searchProducts')
+				removeValue('keywordsearched')
+
 				break;
 			default:
 				//showAlert('default case');
@@ -115,8 +118,6 @@ export default {
 	createOrder: async () => {
 		const orderID = BigInt(Date.now().toString() + Math.floor(Math.random() * 1000000).toString()).toString().substr(0, 10);
 		const paymentID = BigInt(Date.now().toString() + Math.floor(Math.random() * 1000000).toString()).toString().substr(0, 8);
-		// showAlert(`orderID: ${orderID}`, 'info');
-		// showAlert(`paymentID: ${paymentID}`, 'info');
 
 		if (orderID > 0 && paymentID > 0) {
 				storeValue('orderID', orderID);
@@ -125,10 +126,11 @@ export default {
 				addOrder.run();
 				addPayment.run();
 			
-				let myOrders = getMyOrders.data();
-			
-				storeValue('orderDate', new Date(myOrders[0].orderDate).toDateString());
-				showAlert(`orderDate: ${orderDate}`, 'info');
+				getNewestOrder.run();
+				let date = getNewestOrder.data[0].orderDate;
+				let formattedDate = date.toLowerCase().replace('t', ' ').replace('z', '');
+
+				storeValue('orderDate', formattedDate);
 
 				 /*
 					* This code below is to add each product of order into orderdetails table 

@@ -255,7 +255,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "⚠️ Chưa phát triển tính năng theo dõi đơn hàng đã đặt. \nVui lòng chụp lại mã đơn để kiểm tra khi nhận hàng.",
+                      "text": "⚠️\nVui lòng chụp lại mã đơn để kiểm tra khi nhận hàng.",
                       "key": "elj90f75an",
                       "isDeprecated": false,
                       "rightColumn": 64,

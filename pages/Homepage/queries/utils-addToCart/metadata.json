@@ -29,10 +29,8 @@
         "key": "body"
       }
     ],
-    "isValid": false,
-    "invalids": [
-      "Unable to find plugin 613a26d921750e4b557a9241"
-    ],
+    "isValid": true,
+    "invalids": [],
     "messages": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

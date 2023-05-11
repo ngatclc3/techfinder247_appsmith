@@ -529,7 +529,7 @@
                         }
                       ],
                       "text": "Lưu",
-                      "isDisabled": true,
+                      "isDisabled": false,
                       "key": "fu5cfw8tbj",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 61,
